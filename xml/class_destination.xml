@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="class_destination" kind="class" language="C++" prot="public">
+    <compoundname>Destination</compoundname>
+    <includes refid="destination_8h" local="no">destination.h</includes>
+    <briefdescription>
+<para>Represents a network destination for packet transmission. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class handles the configuration and management of a destination, including address, modulation scheme, and packet arrival details.</para>
+<sect1 id="class_destination_1autotoc_md0_1s1"><sect2 id="class_destination_1autotoc_md0_1s2"><sect3 id="class_destination_1autotoc_md0_1s3"><sect4 id="class_destination_1autotoc_md0_1s4"><sect5 id="class_destination_1autotoc_md0">
+<title>Attributes:</title><para><itemizedlist>
+<listitem><para>int m_no: <linebreak/>
+ <ref refid="class_destination" kindref="compound">Destination</ref> address (1, 2, etc.).</para>
+</listitem><listitem><para>int m_mcs: <linebreak/>
+ Modulation and Coding Scheme (MCS) index.</para>
+</listitem><listitem><para>double m_phyRate: <linebreak/>
+ Physical Transmission Rate in Megabits per second (Mbit/s).</para>
+</listitem><listitem><para>double m_arrivalRate: <linebreak/>
+ Number of packets transferred per second for this source.</para>
+</listitem><listitem><para>int m_arrivalDistribution: <linebreak/>
+ Distribution type for interarrival times:<itemizedlist>
+<listitem><para>Deterministic (0): time between events is constant.</para>
+</listitem><listitem><para>Poisson (1): random events that occur independently with a constant average rate. </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect5></sect4></sect3></sect2></sect1>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Destination</label>
+        <link refid="class_destination"/>
+      </node>
+    </collaborationgraph>
+    <location file="destination.h" line="5" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

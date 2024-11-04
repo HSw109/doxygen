@@ -1,0 +1,12 @@
+<map id="ruAllocationOptimal" name="ruAllocationOptimal">
+<area shape="rect" id="Node000001" title="Return a vector combines of RuTypes that optimal for packetList." alt="" coords="5,51,140,77"/>
+<area shape="rect" id="Node000002" href="$transmission_8cc.html#a147da8463af38f23f7cc084be4920c1e" title="Calculate objective Function for given packet List and corresponding tones." alt="" coords="188,13,311,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,47,172,40,173,46,139,53"/>
+<area shape="rect" id="Node000005" href="$transmission_8cc.html#ac2e8aca1d9459efd72866fb4009aeaf6" title="Algorithm for generate all possile combination RU list for packet list." alt="" coords="201,88,298,115"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="139,75,186,85,185,91,138,81"/>
+<area shape="rect" id="Node000003" href="$transmission_8cc.html#ac6d611f7de49524c593519d0425c5a09" title="Get the Transmission Time Ofdma Frame object." alt="" coords="359,5,544,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="312,24,343,24,343,29,312,29"/>
+<area shape="rect" id="Node000004" href="$transmission_8cc.html#ab7342ed5f6ffba181326149f8dd8bcfa" title="Get the Mac Transmission Time of a packet (Layer 2: Data link layer)" alt="" coords="592,13,764,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="545,24,576,24,576,29,545,29"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="219,89,214,79,217,70,230,63,249,61,271,64,282,70,279,75,269,69,249,67,231,69,221,73,219,79,224,86"/>
+</map>

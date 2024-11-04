@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.12.0" xml:lang="en-US">
+  <compound refid="class_destination" kind="class"><name>Destination</name>
+  </compound>
+  <compound refid="classdestination" kind="class"><name>destination</name>
+    <member refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" kind="variable"><name>m_no</name></member>
+    <member refid="classdestination_1a4548881e744673365ee3d134ef54ec87" kind="variable"><name>m_mcs</name></member>
+    <member refid="classdestination_1aa6b9d16cc17841618bdb99e056da91f7" kind="variable"><name>m_phyRate</name></member>
+    <member refid="classdestination_1ace450746c6ca7ab6873a700033bf7be5" kind="variable"><name>m_arrivalRate</name></member>
+    <member refid="classdestination_1a81c79bd3652ae7257bf97425b8bea4a8" kind="variable"><name>m_arrivalDistribution</name></member>
+    <member refid="classdestination_1ab62577976674a1c7ced33cf6d7528ecc" kind="function"><name>destination</name></member>
+    <member refid="classdestination_1af5aa20147c29328b11d37520449543a9" kind="function"><name>destination</name></member>
+    <member refid="classdestination_1a017f9cb30b45ac08492ee3520f42a292" kind="function"><name>operator==</name></member>
+    <member refid="classdestination_1ac65201dc2528eb8fed4a657cd7f4eae1" kind="function"><name>~destination</name></member>
+  </compound>
+  <compound refid="classevent" kind="class"><name>event</name>
+    <member refid="classevent_1a225755cc86473cfa846e0916f1a14673" kind="variable"><name>m_type</name></member>
+    <member refid="classevent_1a197ccc178fba5962fe0befb78782cfb7" kind="variable"><name>m_dest</name></member>
+    <member refid="classevent_1a6cdac5ba9e878cb82656bd1cc50f832e" kind="variable"><name>m_time</name></member>
+    <member refid="classevent_1a9cb379690ae9bc9b599bf5170b978db0" kind="friend"><name>operator&lt;&lt;</name></member>
+    <member refid="classevent_1ab54feb625799baa41b05e8737aab581b" kind="function"><name>event</name></member>
+    <member refid="classevent_1a9027354d797205dd1369b46f3485b8c4" kind="function"><name>~event</name></member>
+    <member refid="classevent_1abb86e9c16cba8f886a22ba65403ef729" kind="function"><name>print</name></member>
+  </compound>
+  <compound refid="classpacket" kind="class"><name>packet</name>
+    <member refid="classpacket_1aabf7e3d557441592087d82f797b6e809" kind="variable"><name>m_size</name></member>
+    <member refid="classpacket_1a28d79baa3b5bfb62fe40c5ac1c0af1f6" kind="variable"><name>m_arrival</name></member>
+    <member refid="classpacket_1ab6ac239ca93654d87058539f0c2aae80" kind="variable"><name>m_destination</name></member>
+    <member refid="classpacket_1ad95bdce2542d99fb3c3568b0db27370d" kind="function"><name>packet</name></member>
+    <member refid="classpacket_1a10bdaf10787afe1906641c09b1a2b178" kind="function"><name>operator==</name></member>
+    <member refid="classpacket_1a3aca23ec069310e1d9fa572c5e52a807" kind="function"><name>~packet</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="destination_8cc" kind="file"><name>destination.cc</name>
+  </compound>
+  <compound refid="destination_8h" kind="file"><name>destination.h</name>
+  </compound>
+  <compound refid="event_8cc" kind="file"><name>event.cc</name>
+    <member refid="event_8cc_1a9cb379690ae9bc9b599bf5170b978db0" kind="function"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="event_8h" kind="file"><name>event.h</name>
+  </compound>
+  <compound refid="main_8cc" kind="file"><name>main.cc</name>
+    <member refid="main_8cc_1a272038ad264893a568c808f13d818b17" kind="variable"><name>currentTime</name></member>
+    <member refid="main_8cc_1a6eceaf5d8661dfce847f4d43b597a68c" kind="variable"><name>startTxTime</name></member>
+    <member refid="main_8cc_1a23f73030eca70af950169253afb45e78" kind="variable"><name>stopTxTime</name></member>
+    <member refid="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" kind="variable"><name>events</name></member>
+    <member refid="main_8cc_1ae5f0037cbe9c880ca2b6b4216489f6bb" kind="variable"><name>destinations</name></member>
+    <member refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kind="variable"><name>buffer</name></member>
+    <member refid="main_8cc_1aa06e8bec472fb80093156543f60afe51" kind="variable"><name>engine</name></member>
+    <member refid="main_8cc_1a24c4eaa31943d824eb99a9331b7a535e" kind="function"><name>getSampleExpDistribution</name></member>
+    <member refid="main_8cc_1a6291f693a2bd3ab2f5572e5629509ed3" kind="function"><name>printEvents</name></member>
+    <member refid="main_8cc_1a6038201223d2d33b5dad7932cdb3d28a" kind="function"><name>insertEvent</name></member>
+    <member refid="main_8cc_1a2be16db840defa7a42b72ec0320ebb28" kind="function"><name>addNextArrival</name></member>
+    <member refid="main_8cc_1a2b350615ebf5a6af338d81e1a864b48e" kind="function"><name>scheduleNextTransmission</name></member>
+    <member refid="main_8cc_1a5f910f9f64fe4a6481f828d276c72b24" kind="function"><name>logger</name></member>
+    <member refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" kind="function"><name>simulateQueue</name></member>
+    <member refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="packet_8cc" kind="file"><name>packet.cc</name>
+  </compound>
+  <compound refid="packet_8h" kind="file"><name>packet.h</name>
+  </compound>
+  <compound refid="transmission_8cc" kind="file"><name>transmission.cc</name>
+    <member refid="transmission_8cc_1aac31c48a4c2a61ab0477cab11fbb766b" kind="variable"><name>phyRate</name></member>
+    <member refid="transmission_8cc_1a8c6223c9cd7962eca294b550f36f159e" kind="variable"><name>accessTimeAndAck</name></member>
+    <member refid="transmission_8cc_1a71b420b9a271ff67fe17d3f93d6a81b1" kind="variable"><name>bandwidth</name></member>
+    <member refid="transmission_8cc_1a61b1269a1e66e3f41842d7fe975127e3" kind="variable"><name>maxTones</name></member>
+    <member refid="transmission_8cc_1a400de5a490a25cff56ef1bae861f2ea1" kind="variable"><name>maxClient</name></member>
+    <member refid="transmission_8cc_1aba83986fa8a5140d20eca119f48c10df" kind="variable"><name>RuType</name></member>
+    <member refid="transmission_8cc_1ab7342ed5f6ffba181326149f8dd8bcfa" kind="function"><name>getMacTransmissionTime</name></member>
+    <member refid="transmission_8cc_1a54eb34961baa3decb1e480234eee0a45" kind="function"><name>newDest</name></member>
+    <member refid="transmission_8cc_1acac6dc1d91e8b14df7007ddb4e25c58d" kind="function"><name>alpha_i</name></member>
+    <member refid="transmission_8cc_1ac6d611f7de49524c593519d0425c5a09" kind="function"><name>getTransmissionTimeOfdmaFrame</name></member>
+    <member refid="transmission_8cc_1aaa49bc1ad53343dcbe56639d207e83a6" kind="function"><name>ruAllocation</name></member>
+    <member refid="transmission_8cc_1ac2e8aca1d9459efd72866fb4009aeaf6" kind="function"><name>ruBruteForce</name></member>
+    <member refid="transmission_8cc_1aee5e234bc1d3de3097033b1b12d5ee0c" kind="function"><name>ruAllocationOptimal</name></member>
+    <member refid="transmission_8cc_1a147da8463af38f23f7cc084be4920c1e" kind="function"><name>objectiveFunction</name></member>
+    <member refid="transmission_8cc_1ac15752338ea1254dff25c7cb14140a08" kind="function"><name>getTransmissionTimePayload</name></member>
+    <member refid="transmission_8cc_1ab2338ac05d15d17fdcd3b6401a6e4508" kind="function"><name>fifo</name></member>
+    <member refid="transmission_8cc_1a22f983f29243c20d665bf025aada871e" kind="function"><name>fifoAggregation</name></member>
+    <member refid="transmission_8cc_1a8d89a9539ccc0c3fb5a43f756c60e3d5" kind="function"><name>fifoOFDMAOptimal</name></member>
+    <member refid="transmission_8cc_1a95d672e86c3804fea8754cdb7377e49e" kind="function"><name>transmitNextPackets</name></member>
+  </compound>
+  <compound refid="transmission_8h" kind="file"><name>transmission.h</name>
+    <member refid="transmission_8h_1acac6dc1d91e8b14df7007ddb4e25c58d" kind="function"><name>alpha_i</name></member>
+    <member refid="transmission_8h_1ab7342ed5f6ffba181326149f8dd8bcfa" kind="function"><name>getMacTransmissionTime</name></member>
+    <member refid="transmission_8h_1a54eb34961baa3decb1e480234eee0a45" kind="function"><name>newDest</name></member>
+    <member refid="transmission_8h_1ac6d611f7de49524c593519d0425c5a09" kind="function"><name>getTransmissionTimeOfdmaFrame</name></member>
+    <member refid="transmission_8h_1aaa49bc1ad53343dcbe56639d207e83a6" kind="function"><name>ruAllocation</name></member>
+    <member refid="transmission_8h_1ac2e8aca1d9459efd72866fb4009aeaf6" kind="function"><name>ruBruteForce</name></member>
+    <member refid="transmission_8h_1aee5e234bc1d3de3097033b1b12d5ee0c" kind="function"><name>ruAllocationOptimal</name></member>
+    <member refid="transmission_8h_1a147da8463af38f23f7cc084be4920c1e" kind="function"><name>objectiveFunction</name></member>
+    <member refid="transmission_8h_1ac15752338ea1254dff25c7cb14140a08" kind="function"><name>getTransmissionTimePayload</name></member>
+    <member refid="transmission_8h_1ab16115ae938d90def3db56ef8c0c87ed" kind="function"><name>fifo</name></member>
+    <member refid="transmission_8h_1a22f983f29243c20d665bf025aada871e" kind="function"><name>fifoAggregation</name></member>
+    <member refid="transmission_8h_1a8d89a9539ccc0c3fb5a43f756c60e3d5" kind="function"><name>fifoOFDMAOptimal</name></member>
+    <member refid="transmission_8h_1ac756511a8c11b7bdd34da37e56c2881c" kind="function"><name>fifo_ofdma</name></member>
+    <member refid="transmission_8h_1aea69413bba5cf554127cb5ba791e66ad" kind="function"><name>transmitNextPackets</name></member>
+  </compound>
+</doxygenindex>

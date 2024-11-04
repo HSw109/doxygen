@@ -1,0 +1,156 @@
+\doxysection{destination Class Reference}
+\hypertarget{classdestination}{}\label{classdestination}\index{destination@{destination}}
+
+
+{\ttfamily \#include $<$destination.\+h$>$}
+
+
+
+Collaboration diagram for destination\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classdestination__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdestination_ab62577976674a1c7ced33cf6d7528ecc}{destination}} (int no=0, int mcs=0, double arrival\+Rate=1.\+0, int arrival\+Type=0)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classdestination_ab62577976674a1c7ced33cf6d7528ecc}{destination\+::destination} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdestination_af5aa20147c29328b11d37520449543a9}{destination}} (double \mbox{\hyperlink{transmission_8cc_aac31c48a4c2a61ab0477cab11fbb766b}{phy\+Rate}}, int no, double arrival\+Rate, int arrival\+Type)
+\begin{DoxyCompactList}\small\item\em Constructor overloading a new \doxylink{classdestination_ab62577976674a1c7ced33cf6d7528ecc}{destination\+::destination} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdestination_a017f9cb30b45ac08492ee3520f42a292}{operator==}} (\mbox{\hyperlink{classdestination}{destination}} \&a\+Dest)
+\begin{DoxyCompactList}\small\item\em Comparision. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdestination_ac65201dc2528eb8fed4a657cd7f4eae1}{\texorpdfstring{$\sim$}{\string~}destination}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{classdestination_ab62577976674a1c7ced33cf6d7528ecc}{destination\+::destination} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classdestination_a423b9008ebc7659776c323fd4c8250cc}{m\+\_\+no}}
+\item 
+int \mbox{\hyperlink{classdestination_a4548881e744673365ee3d134ef54ec87}{m\+\_\+mcs}}
+\item 
+double \mbox{\hyperlink{classdestination_aa6b9d16cc17841618bdb99e056da91f7}{m\+\_\+phy\+Rate}}
+\item 
+double \mbox{\hyperlink{classdestination_ace450746c6ca7ab6873a700033bf7be5}{m\+\_\+arrival\+Rate}}
+\item 
+int \mbox{\hyperlink{classdestination_a81c79bd3652ae7257bf97425b8bea4a8}{m\+\_\+arrival\+Distribution}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classdestination_ab62577976674a1c7ced33cf6d7528ecc}\index{destination@{destination}!destination@{destination}}
+\index{destination@{destination}!destination@{destination}}
+\doxysubsubsection{\texorpdfstring{destination()}{destination()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classdestination_ab62577976674a1c7ced33cf6d7528ecc} 
+destination\+::destination (\begin{DoxyParamCaption}\item[{int}]{no}{ = {\ttfamily 0}, }\item[{int}]{mcs}{ = {\ttfamily 0}, }\item[{double}]{arrival\+Rate}{ = {\ttfamily 1.0}, }\item[{int}]{arrival\+Type}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{classdestination_ab62577976674a1c7ced33cf6d7528ecc}{destination\+::destination} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & \doxylink{class_destination}{Destination} address \\
+\hline
+{\em mcs} & How bits are mapped \\
+\hline
+{\em arrival\+Rate} & Number of packet transfered in a second \\
+\hline
+{\em arrival\+Type} & Deterministic (0) or Poisson (1) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classdestination_af5aa20147c29328b11d37520449543a9}\index{destination@{destination}!destination@{destination}}
+\index{destination@{destination}!destination@{destination}}
+\doxysubsubsection{\texorpdfstring{destination()}{destination()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classdestination_af5aa20147c29328b11d37520449543a9} 
+destination\+::destination (\begin{DoxyParamCaption}\item[{double}]{phy\+Rate}{, }\item[{int}]{no}{, }\item[{double}]{arrival\+Rate}{, }\item[{int}]{arrival\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Constructor overloading a new \doxylink{classdestination_ab62577976674a1c7ced33cf6d7528ecc}{destination\+::destination} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phy\+Rate} & Custom physical rate \\
+\hline
+{\em no} & \doxylink{class_destination}{Destination} address \\
+\hline
+{\em arrival\+Rate} & Number of packet transfered per seconds \\
+\hline
+{\em arrival\+Type} & Deterministic (0) or Poisson (1) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classdestination_ac65201dc2528eb8fed4a657cd7f4eae1}\index{destination@{destination}!````~destination@{\texorpdfstring{$\sim$}{\string~}destination}}
+\index{````~destination@{\texorpdfstring{$\sim$}{\string~}destination}!destination@{destination}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}destination()}{\string~destination()}}
+{\footnotesize\ttfamily \label{classdestination_ac65201dc2528eb8fed4a657cd7f4eae1} 
+destination\+::\texorpdfstring{$\sim$}{\string~}destination (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroy the \doxylink{classdestination_ab62577976674a1c7ced33cf6d7528ecc}{destination\+::destination} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdestination_a017f9cb30b45ac08492ee3520f42a292}\index{destination@{destination}!operator==@{operator==}}
+\index{operator==@{operator==}!destination@{destination}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{classdestination_a017f9cb30b45ac08492ee3520f42a292} 
+bool destination\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdestination}{destination}} \&}]{a\+Dest}{}\end{DoxyParamCaption})}
+
+
+
+Comparision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Dest} & Given destination \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classdestination_a81c79bd3652ae7257bf97425b8bea4a8}\index{destination@{destination}!m\_arrivalDistribution@{m\_arrivalDistribution}}
+\index{m\_arrivalDistribution@{m\_arrivalDistribution}!destination@{destination}}
+\doxysubsubsection{\texorpdfstring{m\_arrivalDistribution}{m\_arrivalDistribution}}
+{\footnotesize\ttfamily \label{classdestination_a81c79bd3652ae7257bf97425b8bea4a8} 
+int destination\+::m\+\_\+arrival\+Distribution}
+
+\Hypertarget{classdestination_ace450746c6ca7ab6873a700033bf7be5}\index{destination@{destination}!m\_arrivalRate@{m\_arrivalRate}}
+\index{m\_arrivalRate@{m\_arrivalRate}!destination@{destination}}
+\doxysubsubsection{\texorpdfstring{m\_arrivalRate}{m\_arrivalRate}}
+{\footnotesize\ttfamily \label{classdestination_ace450746c6ca7ab6873a700033bf7be5} 
+double destination\+::m\+\_\+arrival\+Rate}
+
+\Hypertarget{classdestination_a4548881e744673365ee3d134ef54ec87}\index{destination@{destination}!m\_mcs@{m\_mcs}}
+\index{m\_mcs@{m\_mcs}!destination@{destination}}
+\doxysubsubsection{\texorpdfstring{m\_mcs}{m\_mcs}}
+{\footnotesize\ttfamily \label{classdestination_a4548881e744673365ee3d134ef54ec87} 
+int destination\+::m\+\_\+mcs}
+
+\Hypertarget{classdestination_a423b9008ebc7659776c323fd4c8250cc}\index{destination@{destination}!m\_no@{m\_no}}
+\index{m\_no@{m\_no}!destination@{destination}}
+\doxysubsubsection{\texorpdfstring{m\_no}{m\_no}}
+{\footnotesize\ttfamily \label{classdestination_a423b9008ebc7659776c323fd4c8250cc} 
+int destination\+::m\+\_\+no}
+
+\Hypertarget{classdestination_aa6b9d16cc17841618bdb99e056da91f7}\index{destination@{destination}!m\_phyRate@{m\_phyRate}}
+\index{m\_phyRate@{m\_phyRate}!destination@{destination}}
+\doxysubsubsection{\texorpdfstring{m\_phyRate}{m\_phyRate}}
+{\footnotesize\ttfamily \label{classdestination_aa6b9d16cc17841618bdb99e056da91f7} 
+double destination\+::m\+\_\+phy\+Rate}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{destination_8h}{destination.\+h}}\item 
+\mbox{\hyperlink{destination_8cc}{destination.\+cc}}\end{DoxyCompactItemize}

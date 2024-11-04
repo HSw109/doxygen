@@ -1,0 +1,143 @@
+\doxysection{event Class Reference}
+\hypertarget{classevent}{}\label{classevent}\index{event@{event}}
+
+
+Represents an event in the network simulation.  
+
+
+
+
+{\ttfamily \#include $<$event.\+h$>$}
+
+
+
+Collaboration diagram for event\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classevent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classevent_ab54feb625799baa41b05e8737aab581b}{event}} (int type, \mbox{\hyperlink{classdestination}{destination}} dest, double time)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classevent_ab54feb625799baa41b05e8737aab581b}{event\+::event} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classevent_a9027354d797205dd1369b46f3485b8c4}{\texorpdfstring{$\sim$}{\string~}event}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{classevent_ab54feb625799baa41b05e8737aab581b}{event\+::event} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classevent_abb86e9c16cba8f886a22ba65403ef729}{print}} ()
+\begin{DoxyCompactList}\small\item\em Print details of an event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classevent_a225755cc86473cfa846e0916f1a14673}{m\+\_\+type}}
+\item 
+\mbox{\hyperlink{classdestination}{destination}} \mbox{\hyperlink{classevent_a197ccc178fba5962fe0befb78782cfb7}{m\+\_\+dest}}
+\item 
+double \mbox{\hyperlink{classevent_a6cdac5ba9e878cb82656bd1cc50f832e}{m\+\_\+time}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classevent_a9cb379690ae9bc9b599bf5170b978db0}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classevent}{event}} \&evt)
+\begin{DoxyCompactList}\small\item\em Shortcut of operator "{}$<$$<$"{} (for printing event details) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an event in the network simulation. 
+
+This class models an event, such as packet arrival or transmission, with details about the destination and time.\hypertarget{classevent_autotoc_md1}{}\doxysubsubsubsubsubsection{\texorpdfstring{Attributes\+:}{Attributes\+:}}\label{classevent_autotoc_md1}
+
+\begin{DoxyItemize}
+\item int m\+\_\+type\+: ~\newline
+ The type of the event\+: 0 for arrival, 1 for transmission.
+\item destination m\+\_\+dest\+: ~\newline
+ For an arrival event, this is the corresponding destination.
+\item double m\+\_\+time\+: ~\newline
+ The time when the event occurs. ~\newline
+ 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classevent_ab54feb625799baa41b05e8737aab581b}\index{event@{event}!event@{event}}
+\index{event@{event}!event@{event}}
+\doxysubsubsection{\texorpdfstring{event()}{event()}}
+{\footnotesize\ttfamily \label{classevent_ab54feb625799baa41b05e8737aab581b} 
+event\+::event (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{\mbox{\hyperlink{classdestination}{destination}}}]{dest}{, }\item[{double}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{classevent_ab54feb625799baa41b05e8737aab581b}{event\+::event} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Arrival or Transmission \\
+\hline
+{\em dest} & Correspond destination that event pointed \\
+\hline
+{\em time} & Time that event occurs \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classevent_a9027354d797205dd1369b46f3485b8c4}\index{event@{event}!````~event@{\texorpdfstring{$\sim$}{\string~}event}}
+\index{````~event@{\texorpdfstring{$\sim$}{\string~}event}!event@{event}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}event()}{\string~event()}}
+{\footnotesize\ttfamily \label{classevent_a9027354d797205dd1369b46f3485b8c4} 
+event\+::\texorpdfstring{$\sim$}{\string~}event (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroy the \doxylink{classevent_ab54feb625799baa41b05e8737aab581b}{event\+::event} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classevent_abb86e9c16cba8f886a22ba65403ef729}\index{event@{event}!print@{print}}
+\index{print@{print}!event@{event}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{classevent_abb86e9c16cba8f886a22ba65403ef729} 
+void event\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Print details of an event. 
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classevent_a9cb379690ae9bc9b599bf5170b978db0}\index{event@{event}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!event@{event}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{classevent_a9cb379690ae9bc9b599bf5170b978db0} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{classevent}{event}} \&}]{evt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Shortcut of operator "{}$<$$<$"{} (for printing event details) 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classevent_a197ccc178fba5962fe0befb78782cfb7}\index{event@{event}!m\_dest@{m\_dest}}
+\index{m\_dest@{m\_dest}!event@{event}}
+\doxysubsubsection{\texorpdfstring{m\_dest}{m\_dest}}
+{\footnotesize\ttfamily \label{classevent_a197ccc178fba5962fe0befb78782cfb7} 
+\mbox{\hyperlink{classdestination}{destination}} event\+::m\+\_\+dest}
+
+\Hypertarget{classevent_a6cdac5ba9e878cb82656bd1cc50f832e}\index{event@{event}!m\_time@{m\_time}}
+\index{m\_time@{m\_time}!event@{event}}
+\doxysubsubsection{\texorpdfstring{m\_time}{m\_time}}
+{\footnotesize\ttfamily \label{classevent_a6cdac5ba9e878cb82656bd1cc50f832e} 
+double event\+::m\+\_\+time}
+
+\Hypertarget{classevent_a225755cc86473cfa846e0916f1a14673}\index{event@{event}!m\_type@{m\_type}}
+\index{m\_type@{m\_type}!event@{event}}
+\doxysubsubsection{\texorpdfstring{m\_type}{m\_type}}
+{\footnotesize\ttfamily \label{classevent_a225755cc86473cfa846e0916f1a14673} 
+int event\+::m\+\_\+type}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{event_8h}{event.\+h}}\item 
+\mbox{\hyperlink{event_8cc}{event.\+cc}}\end{DoxyCompactItemize}

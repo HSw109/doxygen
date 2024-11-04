@@ -1,0 +1,5 @@
+<map id="scheduleNextTransmission" name="scheduleNextTransmission">
+<area shape="rect" id="Node000001" title="Scheduling transmission with given time." alt="" coords="5,5,185,32"/>
+<area shape="rect" id="Node000002" href="$main_8cc.html#a6038201223d2d33b5dad7932cdb3d28a" title="Insert given event object to the events list, then sort the list with time ordered." alt="" coords="233,5,320,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,16,217,16,217,21,185,21"/>
+</map>

@@ -1,0 +1,752 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="main_8cc" kind="file" language="C++">
+    <compoundname>main.cc</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">list</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">random</includes>
+    <includes refid="packet_8h" local="yes">packet.h</includes>
+    <includes refid="destination_8h" local="yes">destination.h</includes>
+    <includes refid="event_8h" local="yes">event.h</includes>
+    <includes refid="transmission_8h" local="yes">transmission.h</includes>
+    <includes local="yes">spdlog/spdlog.h</includes>
+    <includes local="yes">spdlog/sinks/stdout_color_sinks.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>destination.h</label>
+        <link refid="destination_8h"/>
+      </node>
+      <node id="8">
+        <label>event.h</label>
+        <link refid="event_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>main.cc</label>
+        <link refid="main_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>transmission.h</label>
+        <link refid="transmission_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>list</label>
+      </node>
+      <node id="5">
+        <label>random</label>
+      </node>
+      <node id="10">
+        <label>set</label>
+      </node>
+      <node id="12">
+        <label>spdlog/sinks/stdout_color_sinks.h</label>
+      </node>
+      <node id="11">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="main_8cc_1a272038ad264893a568c808f13d818b17" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double currentTime</definition>
+        <argsstring></argsstring>
+        <name>currentTime</name>
+        <initializer>=0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="19" column="8" bodyfile="main.cc" bodystart="19" bodyend="-1"/>
+        <referencedby refid="main_8cc_1a2be16db840defa7a42b72ec0320ebb28" compoundref="main_8cc" startline="98" endline="120">addNextArrival</referencedby>
+        <referencedby refid="transmission_8cc_1ab2338ac05d15d17fdcd3b6401a6e4508" compoundref="transmission_8cc" startline="339" endline="362">fifo</referencedby>
+        <referencedby refid="transmission_8cc_1a8d89a9539ccc0c3fb5a43f756c60e3d5" compoundref="transmission_8cc" startline="502" endline="619">fifoOFDMAOptimal</referencedby>
+        <referencedby refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" compoundref="main_8cc" startline="165" endline="272">simulateQueue</referencedby>
+        <referencedby refid="transmission_8cc_1a95d672e86c3804fea8754cdb7377e49e" compoundref="transmission_8cc" startline="622" endline="635">transmitNextPackets</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cc_1a6eceaf5d8661dfce847f4d43b597a68c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double startTxTime</definition>
+        <argsstring></argsstring>
+        <name>startTxTime</name>
+        <initializer>=0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="20" column="8" bodyfile="main.cc" bodystart="20" bodyend="-1"/>
+        <referencedby refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" compoundref="main_8cc" startline="165" endline="272">simulateQueue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cc_1a23f73030eca70af950169253afb45e78" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double stopTxTime</definition>
+        <argsstring></argsstring>
+        <name>stopTxTime</name>
+        <initializer>=0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="20" column="20" bodyfile="main.cc" bodystart="20" bodyend="-1"/>
+        <referencedby refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" compoundref="main_8cc" startline="165" endline="272">simulateQueue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" prot="public" static="no" mutable="no">
+        <type>list&lt; <ref refid="classevent" kindref="compound">event</ref> &gt;</type>
+        <definition>list&lt;event&gt; events</definition>
+        <argsstring></argsstring>
+        <name>events</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="22" column="6" bodyfile="main.cc" bodystart="22" bodyend="-1"/>
+        <referencedby refid="main_8cc_1a6038201223d2d33b5dad7932cdb3d28a" compoundref="main_8cc" startline="73" endline="87">insertEvent</referencedby>
+        <referencedby refid="main_8cc_1a6291f693a2bd3ab2f5572e5629509ed3" compoundref="main_8cc" startline="57" endline="65">printEvents</referencedby>
+        <referencedby refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" compoundref="main_8cc" startline="165" endline="272">simulateQueue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cc_1ae5f0037cbe9c880ca2b6b4216489f6bb" prot="public" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classdestination" kindref="compound">destination</ref> &gt;</type>
+        <definition>vector&lt;destination&gt; destinations</definition>
+        <argsstring></argsstring>
+        <name>destinations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="23" column="8" bodyfile="main.cc" bodystart="23" bodyend="-1"/>
+        <referencedby refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cc" startline="274" endline="319">main</referencedby>
+        <referencedby refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" compoundref="main_8cc" startline="165" endline="272">simulateQueue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" prot="public" static="no" mutable="no">
+        <type>list&lt; <ref refid="classpacket" kindref="compound">packet</ref> &gt;</type>
+        <definition>list&lt;packet&gt; buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="24" column="6" bodyfile="main.cc" bodystart="24" bodyend="-1"/>
+        <referencedby refid="transmission_8cc_1ab2338ac05d15d17fdcd3b6401a6e4508" compoundref="transmission_8cc" startline="339" endline="362">fifo</referencedby>
+        <referencedby refid="transmission_8cc_1a22f983f29243c20d665bf025aada871e" compoundref="transmission_8cc" startline="379" endline="487">fifoAggregation</referencedby>
+        <referencedby refid="transmission_8cc_1a8d89a9539ccc0c3fb5a43f756c60e3d5" compoundref="transmission_8cc" startline="502" endline="619">fifoOFDMAOptimal</referencedby>
+        <referencedby refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cc" startline="274" endline="319">main</referencedby>
+        <referencedby refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" compoundref="main_8cc" startline="165" endline="272">simulateQueue</referencedby>
+        <referencedby refid="transmission_8cc_1a95d672e86c3804fea8754cdb7377e49e" compoundref="transmission_8cc" startline="622" endline="635">transmitNextPackets</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cc_1aa06e8bec472fb80093156543f60afe51" prot="public" static="no" mutable="no">
+        <type>mt19937</type>
+        <definition>mt19937 engine</definition>
+        <argsstring></argsstring>
+        <name>engine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="26" column="9" bodyfile="main.cc" bodystart="26" bodyend="-1"/>
+        <referencedby refid="main_8cc_1a24c4eaa31943d824eb99a9331b7a535e" compoundref="main_8cc" startline="44" endline="49">getSampleExpDistribution</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cc_1a24c4eaa31943d824eb99a9331b7a535e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getSampleExpDistribution</definition>
+        <argsstring>(double lambda)</argsstring>
+        <name>getSampleExpDistribution</name>
+        <param>
+          <type>double</type>
+          <declname>lambda</declname>
+        </param>
+        <briefdescription>
+<para>Get the Sample Poisson Distribution object, lambda is the mean of the Poisson distribution. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lambda</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="44" column="5" bodyfile="main.cc" bodystart="44" bodyend="49"/>
+        <references refid="main_8cc_1aa06e8bec472fb80093156543f60afe51" compoundref="main_8cc" startline="26">engine</references>
+        <referencedby refid="main_8cc_1a2be16db840defa7a42b72ec0320ebb28" compoundref="main_8cc" startline="98" endline="120">addNextArrival</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="main_8cc_1a6291f693a2bd3ab2f5572e5629509ed3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printEvents</definition>
+        <argsstring>()</argsstring>
+        <name>printEvents</name>
+        <briefdescription>
+<para>Get output stream, print data of each event instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="57" column="6" bodyfile="main.cc" bodystart="57" bodyend="65"/>
+        <references refid="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" compoundref="main_8cc" startline="22">events</references>
+        <referencedby refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" compoundref="main_8cc" startline="165" endline="272">simulateQueue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="main_8cc_1a6038201223d2d33b5dad7932cdb3d28a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void insertEvent</definition>
+        <argsstring>(class event anEvent)</argsstring>
+        <name>insertEvent</name>
+        <param>
+          <type>class <ref refid="classevent" kindref="compound">event</ref></type>
+          <declname>anEvent</declname>
+        </param>
+        <briefdescription>
+<para>Insert given event object to the events list, then sort the list with time ordered. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>anEvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="73" column="6" bodyfile="main.cc" bodystart="73" bodyend="87"/>
+        <references refid="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" compoundref="main_8cc" startline="22">events</references>
+        <references refid="classevent_1a197ccc178fba5962fe0befb78782cfb7" compoundref="event_8h" startline="27">event::m_dest</references>
+        <references refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" compoundref="destination_8h" startline="31">destination::m_no</references>
+        <references refid="classevent_1a6cdac5ba9e878cb82656bd1cc50f832e" compoundref="event_8h" startline="28">event::m_time</references>
+        <references refid="classevent_1a225755cc86473cfa846e0916f1a14673" compoundref="event_8h" startline="26">event::m_type</references>
+        <referencedby refid="main_8cc_1a2be16db840defa7a42b72ec0320ebb28" compoundref="main_8cc" startline="98" endline="120">addNextArrival</referencedby>
+        <referencedby refid="main_8cc_1a2b350615ebf5a6af338d81e1a864b48e" compoundref="main_8cc" startline="131" endline="136">scheduleNextTransmission</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="main_8cc_1a2be16db840defa7a42b72ec0320ebb28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addNextArrival</definition>
+        <argsstring>(class destination dest)</argsstring>
+        <name>addNextArrival</name>
+        <param>
+          <type>class <ref refid="classdestination" kindref="compound">destination</ref></type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+<para>Add arrival event with given destination for scheduling, time between packets transmitted correspond to each type of distribution is calculated here. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="98" column="6" bodyfile="main.cc" bodystart="98" bodyend="120"/>
+        <references refid="main_8cc_1a272038ad264893a568c808f13d818b17" compoundref="main_8cc" startline="19">currentTime</references>
+        <references refid="main_8cc_1a24c4eaa31943d824eb99a9331b7a535e" compoundref="main_8cc" startline="44" endline="49">getSampleExpDistribution</references>
+        <references refid="main_8cc_1a6038201223d2d33b5dad7932cdb3d28a" compoundref="main_8cc" startline="73" endline="87">insertEvent</references>
+        <references refid="classdestination_1a81c79bd3652ae7257bf97425b8bea4a8" compoundref="destination_8h" startline="35">destination::m_arrivalDistribution</references>
+        <references refid="classdestination_1ace450746c6ca7ab6873a700033bf7be5" compoundref="destination_8h" startline="34">destination::m_arrivalRate</references>
+        <referencedby refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" compoundref="main_8cc" startline="165" endline="272">simulateQueue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="main_8cc_1a2b350615ebf5a6af338d81e1a864b48e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void scheduleNextTransmission</definition>
+        <argsstring>(double time)</argsstring>
+        <name>scheduleNextTransmission</name>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Scheduling transmission with given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="131" column="6" bodyfile="main.cc" bodystart="131" bodyend="136"/>
+        <references refid="main_8cc_1a6038201223d2d33b5dad7932cdb3d28a" compoundref="main_8cc" startline="73" endline="87">insertEvent</references>
+        <referencedby refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" compoundref="main_8cc" startline="165" endline="272">simulateQueue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="main_8cc_1a5f910f9f64fe4a6481f828d276c72b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void logger</definition>
+        <argsstring>(string level_log)</argsstring>
+        <name>logger</name>
+        <param>
+          <type>string</type>
+          <declname>level_log</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="138" column="6" bodyfile="main.cc" bodystart="138" bodyend="156"/>
+        <references refid="main_8cc_1a5f910f9f64fe4a6481f828d276c72b24" compoundref="main_8cc" startline="138" endline="156">logger</references>
+        <referencedby refid="main_8cc_1a5f910f9f64fe4a6481f828d276c72b24" compoundref="main_8cc" startline="138" endline="156">logger</referencedby>
+        <referencedby refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cc" startline="274" endline="319">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="main_8cc_1a396a5d03eec031763770fd71ac337dc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void simulateQueue</definition>
+        <argsstring>(list&lt; packet &gt; &amp;buffer, int discipline)</argsstring>
+        <name>simulateQueue</name>
+        <param>
+          <type>list&lt; <ref refid="classpacket" kindref="compound">packet</ref> &gt; &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>discipline</declname>
+        </param>
+        <briefdescription>
+<para>STARTING SIMULATION. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of packets </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>discipline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Discipline: 0: FIFO, 1: fifoOFDMAoptimal, 2:fifoAggregation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="165" column="6" bodyfile="main.cc" bodystart="165" bodyend="272"/>
+        <references refid="main_8cc_1a2be16db840defa7a42b72ec0320ebb28" compoundref="main_8cc" startline="98" endline="120">addNextArrival</references>
+        <references refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" compoundref="main_8cc" startline="24">buffer</references>
+        <references refid="main_8cc_1a272038ad264893a568c808f13d818b17" compoundref="main_8cc" startline="19">currentTime</references>
+        <references refid="main_8cc_1ae5f0037cbe9c880ca2b6b4216489f6bb" compoundref="main_8cc" startline="23">destinations</references>
+        <references refid="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" compoundref="main_8cc" startline="22">events</references>
+        <references refid="classpacket_1a28d79baa3b5bfb62fe40c5ac1c0af1f6" compoundref="packet_8h" startline="27">packet::m_arrival</references>
+        <references refid="classpacket_1ab6ac239ca93654d87058539f0c2aae80" compoundref="packet_8h" startline="28">packet::m_destination</references>
+        <references refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" compoundref="destination_8h" startline="31">destination::m_no</references>
+        <references refid="classpacket_1aabf7e3d557441592087d82f797b6e809" compoundref="packet_8h" startline="26">packet::m_size</references>
+        <references refid="main_8cc_1a6291f693a2bd3ab2f5572e5629509ed3" compoundref="main_8cc" startline="57" endline="65">printEvents</references>
+        <references refid="main_8cc_1a2b350615ebf5a6af338d81e1a864b48e" compoundref="main_8cc" startline="131" endline="136">scheduleNextTransmission</references>
+        <references refid="main_8cc_1a6eceaf5d8661dfce847f4d43b597a68c" compoundref="main_8cc" startline="20">startTxTime</references>
+        <references refid="main_8cc_1a23f73030eca70af950169253afb45e78" compoundref="main_8cc" startline="20">stopTxTime</references>
+        <references refid="transmission_8cc_1a95d672e86c3804fea8754cdb7377e49e" compoundref="transmission_8cc" startline="622" endline="635">transmitNextPackets</references>
+        <referencedby refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cc" startline="274" endline="319">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cc" line="274" column="5" bodyfile="main.cc" bodystart="274" bodyend="319"/>
+        <references refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" compoundref="main_8cc" startline="24">buffer</references>
+        <references refid="main_8cc_1ae5f0037cbe9c880ca2b6b4216489f6bb" compoundref="main_8cc" startline="23">destinations</references>
+        <references refid="main_8cc_1a5f910f9f64fe4a6481f828d276c72b24" compoundref="main_8cc" startline="138" endline="156">logger</references>
+        <references refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" compoundref="main_8cc" startline="165" endline="272">simulateQueue</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="packet_8h" kindref="compound">packet.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="destination_8h" kindref="compound">destination.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="event_8h" kindref="compound">event.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="transmission_8h" kindref="compound">transmission.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;spdlog/spdlog.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;spdlog/sinks/stdout_color_sinks.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>A<sp/>faire</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>-<sp/>traiter<sp/>les<sp/>evenements<sp/>1<sp/>a<sp/>1<sp/>--&gt;<sp/>transmission<sp/>(schedule<sp/>next<sp/>Transmission)<sp/>arrival<sp/>(schedule<sp/>nex<sp/>arrival)</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//Global<sp/>variables<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="main_8cc_1a272038ad264893a568c808f13d818b17" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>=0.0;</highlight></codeline>
+<codeline lineno="20" refid="main_8cc_1a6eceaf5d8661dfce847f4d43b597a68c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a6eceaf5d8661dfce847f4d43b597a68c" kindref="member">startTxTime</ref>=0.0,<sp/><ref refid="main_8cc_1a23f73030eca70af950169253afb45e78" kindref="member">stopTxTime</ref>=0.0;<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" refkind="member"><highlight class="normal">list&lt;event&gt;<sp/><ref refid="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" kindref="member">events</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//The<sp/>events<sp/>(discrete<sp/>event<sp/>simulator)<sp/>-<sp/>it<sp/>is<sp/>not<sp/>a<sp/>queue<sp/>because<sp/>it<sp/>is<sp/>not<sp/>excatly<sp/>FIFO<sp/>(we<sp/>dequeue<sp/>at<sp/>the<sp/>fornt<sp/>but<sp/>insertion<sp/>of<sp/>event<sp/>is<sp/>not<sp/>neceessarily<sp/>at<sp/>the<sp/>back/end)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="main_8cc_1ae5f0037cbe9c880ca2b6b4216489f6bb" refkind="member"><highlight class="normal">vector&lt;destination&gt;<sp/><ref refid="main_8cc_1ae5f0037cbe9c880ca2b6b4216489f6bb" kindref="member">destinations</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//The<sp/>destinations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" refkind="member"><highlight class="normal">list&lt;packet&gt;<sp/><ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//The<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="main_8cc_1aa06e8bec472fb80093156543f60afe51" refkind="member"><highlight class="normal">mt19937<sp/><ref refid="main_8cc_1aa06e8bec472fb80093156543f60afe51" kindref="member">engine</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//The<sp/>random<sp/>number<sp/>generator<sp/>(the<sp/>discrete<sp/>one)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//Functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>double<sp/>getSampleExpDistribution(double<sp/>lambda)//lambda<sp/>is<sp/>1/E[X]<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>std::exponential_distribution&lt;&gt;<sp/>randomFlot(lambda);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>return(randomFlot(engine));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="main_8cc_1a24c4eaa31943d824eb99a9331b7a535e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a24c4eaa31943d824eb99a9331b7a535e" kindref="member">getSampleExpDistribution</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda)<sp/></highlight><highlight class="comment">//<sp/>lambda<sp/>is<sp/>the<sp/>mean<sp/>of<sp/>the<sp/>Poisson<sp/>distribution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>std::poisson_distribution&lt;&gt;<sp/>randomInt(lambda);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>randomInt(<ref refid="main_8cc_1aa06e8bec472fb80093156543f60afe51" kindref="member">engine</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::trace(</highlight><highlight class="stringliteral">&quot;Poisson<sp/>distribution<sp/>generator&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>print<sp/>an<sp/>event&apos;s<sp/>attribute</highlight></codeline>
+<codeline lineno="57" refid="main_8cc_1a6291f693a2bd3ab2f5572e5629509ed3" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a6291f693a2bd3ab2f5572e5629509ed3" kindref="member">printEvents</ref>()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>std::list&lt;event&gt;::iterator<sp/>it;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>spdlog::trace(</highlight><highlight class="stringliteral">&quot;Print<sp/>all<sp/>events<sp/>of<sp/>list&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(it=<ref refid="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" kindref="member">events</ref>.begin();<sp/>it!=<ref refid="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" kindref="member">events</ref>.end();<sp/>it++)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>get<sp/>output<sp/>stream,<sp/>print<sp/>data<sp/>of<sp/>each<sp/>event<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it-&gt;m_type==0)<sp/>spdlog::debug(</highlight><highlight class="stringliteral">&quot;Event:<sp/>Arrival<sp/>/<sp/>dest=<sp/>{}<sp/>/<sp/>time=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>it-&gt;m_dest.m_no,<sp/>it-&gt;m_time);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>spdlog::debug(</highlight><highlight class="stringliteral">&quot;Event:<sp/>Transmission<sp/>/<sp/>dest=<sp/>{}<sp/>/<sp/>time=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>it-&gt;m_dest.m_no,<sp/>it-&gt;m_time);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="main_8cc_1a6038201223d2d33b5dad7932cdb3d28a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a6038201223d2d33b5dad7932cdb3d28a" kindref="member">insertEvent</ref>(</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/><ref refid="classevent" kindref="compound">event</ref><sp/>anEvent)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>std::list&lt;event&gt;::iterator<sp/>it;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>it=<ref refid="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" kindref="member">events</ref>.begin();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>sort<sp/>the<sp/>event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(anEvent.<ref refid="classevent_1a6cdac5ba9e878cb82656bd1cc50f832e" kindref="member">m_time</ref><sp/>&gt;<sp/>it-&gt;m_time<sp/>&amp;&amp;<sp/>it!=<ref refid="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" kindref="member">events</ref>.end())<sp/>it++;<sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>spdlog::trace(</highlight><highlight class="stringliteral">&quot;Insert<sp/>event<sp/>and<sp/>sorted<sp/>by<sp/>time&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(anEvent.<ref refid="classevent_1a225755cc86473cfa846e0916f1a14673" kindref="member">m_type</ref>==0)<sp/>spdlog::debug(</highlight><highlight class="stringliteral">&quot;Event:<sp/>Arrival<sp/>/<sp/>dest=<sp/>{}<sp/>/<sp/>time=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>anEvent.<ref refid="classevent_1a197ccc178fba5962fe0befb78782cfb7" kindref="member">m_dest</ref>.<ref refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" kindref="member">m_no</ref>,<sp/>anEvent.<ref refid="classevent_1a6cdac5ba9e878cb82656bd1cc50f832e" kindref="member">m_time</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>spdlog::debug(</highlight><highlight class="stringliteral">&quot;Event:<sp/>Transmission<sp/>/<sp/>dest=<sp/>{}<sp/>/<sp/>time=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>anEvent.<ref refid="classevent_1a197ccc178fba5962fe0befb78782cfb7" kindref="member">m_dest</ref>.<ref refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" kindref="member">m_no</ref>,<sp/>anEvent.<ref refid="classevent_1a6cdac5ba9e878cb82656bd1cc50f832e" kindref="member">m_time</ref>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><ref refid="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" kindref="member">events</ref>.insert(it,anEvent);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>insert<sp/>an<sp/>new<sp/>event<sp/>element<sp/>to<sp/>the<sp/>list,<sp/>with<sp/>corresponding<sp/>iterator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//Add<sp/>the<sp/>next<sp/>arrival<sp/>to<sp/>the<sp/>list<sp/>of<sp/>events<sp/>for<sp/>a<sp/>given<sp/>destination</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>1<sp/>packet</highlight></codeline>
+<codeline lineno="98" refid="main_8cc_1a2be16db840defa7a42b72ec0320ebb28" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a2be16db840defa7a42b72ec0320ebb28" kindref="member">addNextArrival</ref>(</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/><ref refid="classdestination" kindref="compound">destination</ref><sp/>dest)<sp/><sp/></highlight><highlight class="comment">//<sp/>given<sp/>destination</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>timeCalculate;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(dest.<ref refid="classdestination_1a81c79bd3652ae7257bf97425b8bea4a8" kindref="member">m_arrivalDistribution</ref>)<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Deterministic<sp/>or<sp/>Poisson</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/>timeCalculate=<ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>+1.0/dest.<ref refid="classdestination_1ace450746c6ca7ab6873a700033bf7be5" kindref="member">m_arrivalRate</ref>;<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>case<sp/>0<sp/>is<sp/>deterministic,<sp/>time<sp/>=<sp/>current<sp/>+<sp/>1/<sp/>numbers<sp/>of<sp/>packet<sp/>=&gt;<sp/>time<sp/>per<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Poisson<sp/>distribution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight><highlight class="comment">//Les<sp/>accolades<sp/>sont<sp/>necessaires<sp/>car<sp/>elle<sp/>fixe<sp/>la<sp/>portee<sp/>de<sp/>la<sp/>declaration<sp/>de<sp/>la<sp/>variable<sp/>ci-dessous</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value=<ref refid="main_8cc_1a24c4eaa31943d824eb99a9331b7a535e" kindref="member">getSampleExpDistribution</ref>(dest.<ref refid="classdestination_1ace450746c6ca7ab6873a700033bf7be5" kindref="member">m_arrivalRate</ref>)/(dest.<ref refid="classdestination_1ace450746c6ca7ab6873a700033bf7be5" kindref="member">m_arrivalRate</ref>*13);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>time<sp/>based<sp/>of<sp/>arrival<sp/>rate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeCalculate=<ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>+value;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>time<sp/>=<sp/>current<sp/>time<sp/>+<sp/>arrival<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::debug(</highlight><highlight class="stringliteral">&quot;rand<sp/>exp<sp/>value:<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>value);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;[ERROR]<sp/>in<sp/>addNextArrival():<sp/>the<sp/>destination<sp/>m_arrivalDistribution<sp/>member<sp/>is<sp/>incorrect<sp/>(=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>dest.<ref refid="classdestination_1a81c79bd3652ae7257bf97425b8bea4a8" kindref="member">m_arrivalDistribution</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//Insert<sp/>this<sp/>event<sp/>in<sp/>the<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>newArrival(0,<sp/>dest,<sp/>timeCalculate);<sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>new<sp/>event<sp/>that<sp/>arrival,<sp/>given<sp/>destination,<sp/>time<sp/>for<sp/>delivery<sp/>1<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>spdlog::trace(</highlight><highlight class="stringliteral">&quot;Add<sp/>new<sp/>arrival<sp/>event&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><ref refid="main_8cc_1a6038201223d2d33b5dad7932cdb3d28a" kindref="member">insertEvent</ref>(newArrival);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>insert<sp/>into<sp/>event<sp/>list<sp/>(sorted)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">//Schedule<sp/>the<sp/>next<sp/>transmission<sp/></highlight></codeline>
+<codeline lineno="131" refid="main_8cc_1a2b350615ebf5a6af338d81e1a864b48e" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a2b350615ebf5a6af338d81e1a864b48e" kindref="member">scheduleNextTransmission</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time)<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>for<sp/>plan<sp/>the<sp/>next<sp/>transmission<sp/>(given<sp/>time<sp/>that<sp/>transmission<sp/>occured)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>newTrans(1,-1,time);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>transmission<sp/>event<sp/>(1),<sp/>no<sp/>destination<sp/>=&gt;<sp/>-1,<sp/>given<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>spdlog::trace(</highlight><highlight class="stringliteral">&quot;Add<sp/>new<sp/>transmission<sp/>event&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><ref refid="main_8cc_1a6038201223d2d33b5dad7932cdb3d28a" kindref="member">insertEvent</ref>(newTrans);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>insert<sp/>event<sp/>to<sp/>the<sp/>list<sp/>(both<sp/>sort)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="main_8cc_1a5f910f9f64fe4a6481f828d276c72b24" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a5f910f9f64fe4a6481f828d276c72b24" kindref="member">logger</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>level_log)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>console_sink<sp/>=<sp/>std::make_shared&lt;spdlog::sinks::stdout_color_sink_mt&gt;();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>console_sink-&gt;set_color(spdlog::level::trace,<sp/>console_sink-&gt;yellow);<sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a5f910f9f64fe4a6481f828d276c72b24" kindref="member">logger</ref><sp/>=<sp/>std::make_shared&lt;spdlog::logger&gt;(</highlight><highlight class="stringliteral">&quot;logger&quot;</highlight><highlight class="normal">,<sp/>console_sink);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>spdlog::set_default_logger(<ref refid="main_8cc_1a5f910f9f64fe4a6481f828d276c72b24" kindref="member">logger</ref>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level_log<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;info&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::set_level(spdlog::level::info);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level_log<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;debug&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::set_level(spdlog::level::debug);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(level_log<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;trace&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::set_level(spdlog::level::trace);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::set_level(spdlog::level::info);<sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>to<sp/>info<sp/>if<sp/>no<sp/>match</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Notable<sp/>function:<sp/>STARTING<sp/>SIMULATION</highlight></codeline>
+<codeline lineno="165" refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" kindref="member">simulateQueue</ref>(list&lt;packet&gt;<sp/>&amp;<ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>discipline)<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>given<sp/>packet<sp/>list<sp/>and<sp/>discipline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbOfTransmissions=0;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxTransmission=1000;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>timeToTransmit;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Start<sp/>simulating...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Max<sp/>number<sp/>of<sp/>transmission<sp/>=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>maxTransmission);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//Start<sp/>of<sp/>the<sp/>simulation:<sp/>we<sp/>add<sp/>an<sp/>arrival<sp/>for<sp/>each<sp/>destination</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" kindref="member">events</ref>.empty())<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>begin,<sp/>list<sp/>is<sp/>empty<sp/>cause<sp/>there<sp/>are<sp/>no<sp/>event<sp/>occur</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;begin<sp/>of<sp/>process,<sp/>the<sp/>event<sp/>list<sp/>is<sp/>empty,<sp/>adding<sp/>arrival<sp/>with<sp/>all<sp/>destination&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>std::begin(<ref refid="main_8cc_1ae5f0037cbe9c880ca2b6b4216489f6bb" kindref="member">destinations</ref>);<sp/>it<sp/>!=<sp/>std::end(<ref refid="main_8cc_1ae5f0037cbe9c880ca2b6b4216489f6bb" kindref="member">destinations</ref>);<sp/>++it)<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>iterate<sp/>all<sp/>destination<sp/>and<sp/>add<sp/>arrival<sp/>to<sp/>the<sp/>event<sp/>list<sp/>based<sp/>on<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;add<sp/>new<sp/>arrival&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cc_1a2be16db840defa7a42b72ec0320ebb28" kindref="member">addNextArrival</ref>(*it);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>all<sp/>arrival<sp/>is<sp/>added<sp/>(starting<sp/>simulation)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>spdlog::debug(</highlight><highlight class="stringliteral">&quot;Event<sp/>list<sp/>before<sp/>processed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><ref refid="main_8cc_1a6291f693a2bd3ab2f5572e5629509ed3" kindref="member">printEvents</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>all<sp/>the<sp/>event<sp/>added<sp/>(all<sp/>sorted)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(nbOfTransmissions<sp/>&lt;<sp/>maxTransmission)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>std::list&lt;event&gt;::iterator<sp/>it;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>iterate<sp/>each<sp/>element<sp/>on<sp/>event<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//What<sp/>is<sp/>the<sp/>next<sp/>event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::debug(</highlight><highlight class="stringliteral">&quot;Queue<sp/>component,<sp/>current<sp/>list<sp/>of<sp/>events&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cc_1a6291f693a2bd3ab2f5572e5629509ed3" kindref="member">printEvents</ref>();</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>it=<ref refid="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" kindref="member">events</ref>.begin();</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Current<sp/>time<sp/>is<sp/>taking<sp/>value<sp/>of<sp/>the<sp/>FIFO<sp/>event<sp/>in<sp/>event<sp/>list,<sp/>before<sp/>updated<sp/>Current<sp/>time<sp/>=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>=it-&gt;m_time;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;After<sp/>updated<sp/>Current<sp/>time<sp/>=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>thisEvent=*it;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//We<sp/>copy<sp/>this<sp/>event<sp/>as<sp/>we<sp/>remove<sp/>it<sp/>from<sp/>the<sp/>list<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Copy<sp/>the<sp/>current<sp/>event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cc_1a819cc5d71332d0b46fb04946b0f7053a" kindref="member">events</ref>.pop_front();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//We<sp/>remove<sp/>this<sp/>event<sp/>as<sp/>it<sp/>is<sp/>process<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Remove<sp/>the<sp/>each<sp/>first<sp/>event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(thisEvent.m_type==0)<sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Queue<sp/>component,<sp/>we<sp/>are<sp/>processing<sp/>=&gt;<sp/>Event:<sp/>Arrival<sp/>/<sp/>dest=<sp/>{}<sp/>/<sp/>time=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>thisEvent.m_dest.m_no,<sp/>thisEvent.m_time);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Queue<sp/>component,<sp/>we<sp/>are<sp/>processing<sp/>=&gt;<sp/>Event:<sp/>Transmission<sp/>/<sp/>dest=<sp/>{}<sp/>/<sp/>time=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>thisEvent.m_dest.m_no,<sp/>thisEvent.m_time);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cc_1a6291f693a2bd3ab2f5572e5629509ed3" kindref="member">printEvents</ref>();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(thisEvent.m_type)<sp/><sp/></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//arrival<sp/>:<sp/>for<sp/>scheduling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>current<sp/>time<sp/>greater<sp/>transmission<sp/>time<sp/>before<sp/>//<sp/>timestamp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::trace(</highlight><highlight class="stringliteral">&quot;Handling<sp/>arrival<sp/>event&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::debug(</highlight><highlight class="stringliteral">&quot;Current<sp/>time<sp/>=<sp/>{},<sp/>StopTxTime<sp/>=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>,<sp/><ref refid="main_8cc_1a23f73030eca70af950169253afb45e78" kindref="member">stopTxTime</ref>);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>.empty()<sp/>&amp;&amp;<sp/>(<ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref><sp/>&gt;<sp/><ref refid="main_8cc_1a23f73030eca70af950169253afb45e78" kindref="member">stopTxTime</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::trace(</highlight><highlight class="stringliteral">&quot;empty<sp/>buffer<sp/>and<sp/>current<sp/>time<sp/>is<sp/>greater<sp/>than<sp/>stop<sp/>transmission<sp/>time&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cc_1a2b350615ebf5a6af338d81e1a864b48e" kindref="member">scheduleNextTransmission</ref>(<ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>);<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>sending<sp/>all<sp/>packet,<sp/>and<sp/>current<sp/>time<sp/>is<sp/>greater<sp/>than<sp/>scheduled<sp/>for<sp/>each<sp/>transmission<sp/>time<sp/>=&gt;<sp/>schedule<sp/>the<sp/>next<sp/>transmission<sp/>is<sp/>the<sp/>current<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>.size()&gt;0<sp/>&amp;&amp;<sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref><sp/>&lt;<sp/><ref refid="main_8cc_1a23f73030eca70af950169253afb45e78" kindref="member">stopTxTime</ref><sp/>&amp;&amp;<sp/>thisEvent.m_dest.m_arrivalDistribution<sp/>==<sp/>0){<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>have<sp/>packets<sp/>in<sp/>buffer<sp/>when<sp/>scheduling,<sp/>send<sp/>it<sp/>immediately</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::trace(</highlight><highlight class="stringliteral">&quot;Cause<sp/>of<sp/>Deterministic,<sp/>send<sp/>the<sp/>buffer<sp/>immediatly&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Current<sp/>time<sp/>before<sp/>update<sp/>=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref><sp/>=<sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref><sp/>+<sp/><ref refid="transmission_8cc_1a95d672e86c3804fea8754cdb7377e49e" kindref="member">transmitNextPackets</ref>(discipline,<sp/><ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>,<sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>current<sp/>time<sp/><sp/><sp/><sp/>(This<sp/>case<sp/>only<sp/>happens<sp/>in<sp/>Deterministic<sp/>mode)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Updated<sp/>current<sp/>time<sp/>=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nbOfTransmissions++;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>transmission<sp/>completed<sp/>=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>nbOfTransmissions);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::trace(</highlight><highlight class="stringliteral">&quot;empty<sp/>buffer<sp/>and<sp/>current<sp/>time<sp/>is<sp/>lesser<sp/>than<sp/>stop<sp/>tranmission<sp/>time&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cc_1a2b350615ebf5a6af338d81e1a864b48e" kindref="member">scheduleNextTransmission</ref>(<ref refid="main_8cc_1a23f73030eca70af950169253afb45e78" kindref="member">stopTxTime</ref>);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>the<sp/>buffer<sp/>is<sp/>empty<sp/>we<sp/>transmits<sp/>at<sp/>the<sp/>arrival<sp/>of<sp/>this<sp/>packet,<sp/>but<sp/>we<sp/>have<sp/>to<sp/>check<sp/>for<sp/>are<sp/>we<sp/>transmitting<sp/>or<sp/>not?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Queue<sp/>component,<sp/>an<sp/>Arrival<sp/>event<sp/>comes.<sp/>Before<sp/>addNextArrival(),<sp/>number<sp/>of<sp/>Packet<sp/>in<sp/>Buffer<sp/>=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>.size());<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(thisEvent.m_dest.m_arrivalDistribution<sp/>==<sp/>0)<sp/>{spdlog::trace(</highlight><highlight class="stringliteral">&quot;How<sp/>set<sp/>up<sp/>the<sp/>next<sp/>arrival<sp/>=&gt;<sp/>case<sp/>0:<sp/>timeCalculate=currentTime+1.0/dest.m_arrivalRate&quot;</highlight><highlight class="normal">);}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{spdlog::trace(</highlight><highlight class="stringliteral">&quot;set<sp/>up<sp/>the<sp/>next<sp/>arrival<sp/>=&gt;<sp/>case<sp/>1:<sp/><sp/>double<sp/>value=getSampleExpDistribution(dest.m_arrivalRate)/(dest.m_arrivalRate*13)&quot;</highlight><highlight class="normal">);}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cc_1a2be16db840defa7a42b72ec0320ebb28" kindref="member">addNextArrival</ref>(thisEvent.m_dest);</highlight><highlight class="comment">//schedule<sp/>the<sp/>next<sp/>arrival<sp/>for<sp/>this<sp/>destination<sp/>=&gt;<sp/>cause<sp/>infinitty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classpacket" kindref="compound">packet</ref><sp/>newPacket(3000,<ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>,thisEvent.m_dest);</highlight><highlight class="comment">//1000<sp/>bytes<sp/>(needs<sp/>to<sp/>be<sp/>changed)<sp/>//<sp/>create<sp/>new<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>class<sp/>packet<sp/>newPacket1(2000,<sp/>currentTime,1);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;new<sp/>packet<sp/>size<sp/>=<sp/>{},<sp/>destination<sp/>=<sp/>{},<sp/>time<sp/>arrival<sp/>=<sp/>{}&quot;</highlight><highlight class="normal">,newPacket.<ref refid="classpacket_1aabf7e3d557441592087d82f797b6e809" kindref="member">m_size</ref>,newPacket.<ref refid="classpacket_1ab6ac239ca93654d87058539f0c2aae80" kindref="member">m_destination</ref>.<ref refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" kindref="member">m_no</ref>,newPacket.<ref refid="classpacket_1a28d79baa3b5bfb62fe40c5ac1c0af1f6" kindref="member">m_arrival</ref>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>spdlog::info(&quot;new<sp/>packet<sp/>size<sp/>=<sp/>{},<sp/>destination<sp/>=<sp/>{},<sp/>time<sp/>arrival<sp/>=<sp/>{}&quot;,newPacket1.m_size,newPacket1.m_destination.m_no,newPacket1.m_arrival);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>buffer<sp/>for<sp/>the<sp/>transmission<sp/>is<sp/>scheduled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>.push_back(newPacket);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>to<sp/>end<sp/>of<sp/>the<sp/>packets<sp/>list<sp/>(if<sp/>arrival)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>buffer.push_back(newPacket1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>add<sp/>to<sp/>end<sp/>of<sp/>the<sp/>packets<sp/>list<sp/>(if<sp/>arrival)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Queue<sp/>component,<sp/>Current<sp/>number<sp/>of<sp/>Packet<sp/>in<sp/>Buffer<sp/>=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>.size());<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//transmission:<sp/>sending</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::trace(</highlight><highlight class="stringliteral">&quot;Handling<sp/>transmission<sp/>event&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>.empty()){spdlog::error(</highlight><highlight class="stringliteral">&quot;buffer<sp/>is<sp/>empty&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;}</highlight><highlight class="comment">//If<sp/>the<sp/>buffer<sp/>is<sp/>empty<sp/>there<sp/>is<sp/>no<sp/>transmission<sp/>(no<sp/>packet<sp/>for<sp/>sending)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref><sp/>&lt;<sp/><ref refid="main_8cc_1a23f73030eca70af950169253afb45e78" kindref="member">stopTxTime</ref>)<sp/>{<sp/>spdlog::error(</highlight><highlight class="stringliteral">&quot;[ERROR]<sp/>in<sp/>another<sp/>transmission&quot;</highlight><highlight class="normal">);<ref refid="main_8cc_1a2b350615ebf5a6af338d81e1a864b48e" kindref="member">scheduleNextTransmission</ref>(<ref refid="main_8cc_1a23f73030eca70af950169253afb45e78" kindref="member">stopTxTime</ref>);<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;<sp/>}<sp/><sp/></highlight><highlight class="comment">//We<sp/>have<sp/>to<sp/>defer<sp/>this<sp/>transmission<sp/>because<sp/>we<sp/>are<sp/>being<sp/>in<sp/>another<sp/>transmission<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Queue<sp/>component,<sp/>buffer<sp/>size<sp/>=<sp/>{},<sp/>start<sp/>tx<sp/>time<sp/>=<sp/>{}&quot;</highlight><highlight class="normal">,<ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>.size(),<sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cc_1a6eceaf5d8661dfce847f4d43b597a68c" kindref="member">startTxTime</ref><sp/>=<sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeToTransmit<sp/>=<sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref><sp/>+<sp/><ref refid="transmission_8cc_1a95d672e86c3804fea8754cdb7377e49e" kindref="member">transmitNextPackets</ref>(discipline,<sp/><ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>,<sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>scheduleNextTransmission(timeToTransmit);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nbOfTransmissions++;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>transmission<sp/>done</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cc_1a23f73030eca70af950169253afb45e78" kindref="member">stopTxTime</ref><sp/>=<sp/>timeToTransmit;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>time<sp/>to<sp/>done<sp/>a<sp/>transmisstion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref><sp/>=<sp/><ref refid="main_8cc_1a23f73030eca70af950169253afb45e78" kindref="member">stopTxTime</ref>;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Queue<sp/>component,<sp/>a<sp/>packet<sp/>has<sp/>been<sp/>transmitted,<sp/>buffer<sp/>size<sp/>=<sp/>{},<sp/>stop<sp/>tx<sp/>time<sp/>=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>.size(),<sp/><ref refid="main_8cc_1a23f73030eca70af950169253afb45e78" kindref="member">stopTxTime</ref>);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Update<sp/>current<sp/>time<sp/>to<sp/>finishing<sp/>transmission<sp/>=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;[END<sp/>OF<sp/>TRANSMISSION]\n\n\n&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;[ERROR]<sp/>in<sp/>simulateQueue():<sp/>the<sp/>event<sp/>type<sp/>is<sp/>incorrect<sp/>(=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>thisEvent.m_type<sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;)\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><ref refid="main_8cc_1a6291f693a2bd3ab2f5572e5629509ed3" kindref="member">printEvents</ref>();</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274" refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[])</highlight></codeline>
+<codeline lineno="275"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/>std::string<sp/>level_log;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>&gt;<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>arg<sp/>=<sp/>argv[1];</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(arg.find(</highlight><highlight class="stringliteral">&quot;--log_level=&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>level_log<sp/>=<sp/>arg.substr(12);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::error(</highlight><highlight class="stringliteral">&quot;MISSING<sp/>LOG<sp/>ARGUMENT:<sp/>Use<sp/>--log_level=&lt;level&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;<sp/><sp/></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::error(</highlight><highlight class="stringliteral">&quot;No<sp/>arguments<sp/>provided.<sp/>Use<sp/>--log_level=&lt;level&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><ref refid="main_8cc_1a5f910f9f64fe4a6481f828d276c72b24" kindref="member">logger</ref>(level_log);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbOfDest=2;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>initialize<sp/>random<sp/>seed:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/>srand<sp/>(time(NULL));</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//Set<sp/>destination<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>class<sp/>destination<sp/>dest1(1,1,500.0,0),<sp/>dest2(2,1,500.0,0),<sp/>dest3(3,1,500.0,0);<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdestination" kindref="compound">destination</ref><sp/>dest1(1,1,500.0,1),<sp/>dest2(2,1,400.0,1),<sp/>dest3(3,1,320.0,1),<sp/>dest4(4,1,600.0,1),<sp/>dest5(5,1,275.0,1),<sp/>dest6(6,1,330.0,1);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><ref refid="main_8cc_1ae5f0037cbe9c880ca2b6b4216489f6bb" kindref="member">destinations</ref>.push_back(dest1);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><ref refid="main_8cc_1ae5f0037cbe9c880ca2b6b4216489f6bb" kindref="member">destinations</ref>.push_back(dest2);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><ref refid="main_8cc_1ae5f0037cbe9c880ca2b6b4216489f6bb" kindref="member">destinations</ref>.push_back(dest3);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><ref refid="main_8cc_1ae5f0037cbe9c880ca2b6b4216489f6bb" kindref="member">destinations</ref>.push_back(dest4);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><ref refid="main_8cc_1ae5f0037cbe9c880ca2b6b4216489f6bb" kindref="member">destinations</ref>.push_back(dest5);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><ref refid="main_8cc_1ae5f0037cbe9c880ca2b6b4216489f6bb" kindref="member">destinations</ref>.push_back(dest6);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//class<sp/>packet<sp/>myPacket(1,2,3);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//cout<sp/>&lt;&lt;<sp/>myPacket.m_destination<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//buffer.push_back(myPacket);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//The<sp/>simulator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><ref refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" kindref="member">simulateQueue</ref>(<ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(0);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="main.cc"/>
+  </compounddef>
+</doxygen>

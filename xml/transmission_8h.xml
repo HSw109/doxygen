@@ -1,0 +1,726 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="transmission_8h" kind="file" language="C++">
+    <compoundname>transmission.h</compoundname>
+    <includes local="no">list</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">set</includes>
+    <includes refid="packet_8h" local="yes">packet.h</includes>
+    <includes refid="destination_8h" local="yes">destination.h</includes>
+    <includedby refid="main_8cc" local="yes">main.cc</includedby>
+    <includedby refid="transmission_8cc" local="yes">transmission.cc</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>destination.h</label>
+        <link refid="destination_8h"/>
+      </node>
+      <node id="5">
+        <label>packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>transmission.h</label>
+        <link refid="transmission_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>list</label>
+      </node>
+      <node id="4">
+        <label>set</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>main.cc</label>
+        <link refid="main_8cc"/>
+      </node>
+      <node id="3">
+        <label>transmission.cc</label>
+        <link refid="transmission_8cc"/>
+      </node>
+      <node id="1">
+        <label>transmission.h</label>
+        <link refid="transmission_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="transmission_8h_1acac6dc1d91e8b14df7007ddb4e25c58d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double alpha_i</definition>
+        <argsstring>(packet pkt)</argsstring>
+        <name>alpha_i</name>
+        <param>
+          <type><ref refid="classpacket" kindref="compound">packet</ref></type>
+          <declname>pkt</declname>
+        </param>
+        <briefdescription>
+<para>Time for transmit a packet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pkt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transmission.h" line="10" column="8" bodyfile="transmission.cc" bodystart="107" bodyend="110" declfile="transmission.h" declline="10" declcolumn="8"/>
+        <references refid="classpacket_1ab6ac239ca93654d87058539f0c2aae80" compoundref="packet_8h" startline="28">packet::m_destination</references>
+        <references refid="classdestination_1aa6b9d16cc17841618bdb99e056da91f7" compoundref="destination_8h" startline="33">destination::m_phyRate</references>
+        <references refid="classpacket_1aabf7e3d557441592087d82f797b6e809" compoundref="packet_8h" startline="26">packet::m_size</references>
+        <referencedby refid="transmission_8cc_1aaa49bc1ad53343dcbe56639d207e83a6" compoundref="transmission_8cc" startline="149" endline="212">ruAllocation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="transmission_8h_1ab7342ed5f6ffba181326149f8dd8bcfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getMacTransmissionTime</definition>
+        <argsstring>(packet aPacket, int nbOfBytesMac, int ru)</argsstring>
+        <name>getMacTransmissionTime</name>
+        <param>
+          <type><ref refid="classpacket" kindref="compound">packet</ref></type>
+          <declname>aPacket</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nbOfBytesMac</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ru</declname>
+        </param>
+        <briefdescription>
+<para>Get the Mac Transmission Time of a packet (Layer 2: Data link layer) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPacket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nbOfBytesMac</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ru</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transmission.h" line="12" column="8" bodyfile="transmission.cc" bodystart="66" bodyend="81" declfile="transmission.h" declline="12" declcolumn="8"/>
+        <references refid="classpacket_1ab6ac239ca93654d87058539f0c2aae80" compoundref="packet_8h" startline="28">packet::m_destination</references>
+        <references refid="classdestination_1a4548881e744673365ee3d134ef54ec87" compoundref="destination_8h" startline="32">destination::m_mcs</references>
+        <references refid="classpacket_1aabf7e3d557441592087d82f797b6e809" compoundref="packet_8h" startline="26">packet::m_size</references>
+        <references refid="transmission_8cc_1aac31c48a4c2a61ab0477cab11fbb766b" compoundref="transmission_8cc" startline="30" endline="43">phyRate</references>
+        <referencedby refid="transmission_8cc_1ac6d611f7de49524c593519d0425c5a09" compoundref="transmission_8cc" startline="119" endline="146">getTransmissionTimeOfdmaFrame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="transmission_8h_1a54eb34961baa3decb1e480234eee0a45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int newDest</definition>
+        <argsstring>(destination aDest, std::list&lt; destination &gt; destList)</argsstring>
+        <name>newDest</name>
+        <param>
+          <type><ref refid="classdestination" kindref="compound">destination</ref></type>
+          <declname>aDest</declname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="classdestination" kindref="compound">destination</ref> &gt;</type>
+          <declname>destList</declname>
+        </param>
+        <briefdescription>
+<para>Checking if it is a new destination founded or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aDest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int (its index if old dest, -1 if new dest) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transmission.h" line="14" column="5" bodyfile="transmission.cc" bodystart="89" bodyend="99" declfile="transmission.h" declline="14" declcolumn="5"/>
+        <references refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" compoundref="destination_8h" startline="31">destination::m_no</references>
+        <referencedby refid="transmission_8cc_1a8d89a9539ccc0c3fb5a43f756c60e3d5" compoundref="transmission_8cc" startline="502" endline="619">fifoOFDMAOptimal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="transmission_8h_1ac6d611f7de49524c593519d0425c5a09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getTransmissionTimeOfdmaFrame</definition>
+        <argsstring>(std::list&lt; packet &gt; packetsList, std::vector&lt; int &gt; ruList)</argsstring>
+        <name>getTransmissionTimeOfdmaFrame</name>
+        <param>
+          <type>std::list&lt; <ref refid="classpacket" kindref="compound">packet</ref> &gt;</type>
+          <declname>packetsList</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>ruList</declname>
+        </param>
+        <briefdescription>
+<para>Get the Transmission Time Ofdma Frame object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>packetsList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of packets </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ruList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of Resource Unit that correspond to each packet </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;double&gt; Return the max transmition time packet&apos;s (cause all packet paralel) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transmission.h" line="16" column="8" bodyfile="transmission.cc" bodystart="119" bodyend="146" declfile="transmission.h" declline="16" declcolumn="8"/>
+        <references refid="transmission_8cc_1ab7342ed5f6ffba181326149f8dd8bcfa" compoundref="transmission_8cc" startline="66" endline="81">getMacTransmissionTime</references>
+        <references refid="transmission_8cc_1aba83986fa8a5140d20eca119f48c10df" compoundref="transmission_8cc" startline="52" endline="52">RuType</references>
+        <referencedby refid="transmission_8cc_1a8d89a9539ccc0c3fb5a43f756c60e3d5" compoundref="transmission_8cc" startline="502" endline="619">fifoOFDMAOptimal</referencedby>
+        <referencedby refid="transmission_8cc_1a147da8463af38f23f7cc084be4920c1e" compoundref="transmission_8cc" startline="293" endline="305">objectiveFunction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="transmission_8h_1aaa49bc1ad53343dcbe56639d207e83a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int *</type>
+        <definition>int * ruAllocation</definition>
+        <argsstring>(std::list&lt; packet &gt; pkt_set)</argsstring>
+        <name>ruAllocation</name>
+        <param>
+          <type>std::list&lt; <ref refid="classpacket" kindref="compound">packet</ref> &gt;</type>
+          <declname>pkt_set</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transmission.h" line="18" column="6" bodyfile="transmission.cc" bodystart="149" bodyend="212" declfile="transmission.h" declline="18" declcolumn="6"/>
+        <references refid="transmission_8cc_1acac6dc1d91e8b14df7007ddb4e25c58d" compoundref="transmission_8cc" startline="107" endline="110">alpha_i</references>
+        <references refid="transmission_8cc_1a61b1269a1e66e3f41842d7fe975127e3" compoundref="transmission_8cc" startline="52">maxTones</references>
+        <references refid="transmission_8cc_1aba83986fa8a5140d20eca119f48c10df" compoundref="transmission_8cc" startline="52" endline="52">RuType</references>
+      </memberdef>
+      <memberdef kind="function" id="transmission_8h_1ac2e8aca1d9459efd72866fb4009aeaf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ruBruteForce</definition>
+        <argsstring>(std::vector&lt; int &gt; ru, int noSta, std::list&lt; std::vector&lt; int &gt; &gt; &amp;ruList)</argsstring>
+        <name>ruBruteForce</name>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>ru</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>noSta</declname>
+        </param>
+        <param>
+          <type>std::list&lt; std::vector&lt; int &gt; &gt; &amp;</type>
+          <declname>ruList</declname>
+        </param>
+        <briefdescription>
+<para>Algorithm for generate all possile combination RU list for packet list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ru</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>blank vector at beginning </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>noSta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of packet - 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ruList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of vector of value of Ru index (A reference to a list where all possible combinations of RU allocations will be stored.) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transmission.h" line="20" column="6" bodyfile="transmission.cc" bodystart="220" bodyend="234" declfile="transmission.h" declline="20" declcolumn="6"/>
+        <references refid="transmission_8cc_1ac2e8aca1d9459efd72866fb4009aeaf6" compoundref="transmission_8cc" startline="220" endline="234">ruBruteForce</references>
+        <references refid="transmission_8cc_1aba83986fa8a5140d20eca119f48c10df" compoundref="transmission_8cc" startline="52" endline="52">RuType</references>
+        <referencedby refid="transmission_8cc_1aee5e234bc1d3de3097033b1b12d5ee0c" compoundref="transmission_8cc" startline="243" endline="283">ruAllocationOptimal</referencedby>
+        <referencedby refid="transmission_8cc_1ac2e8aca1d9459efd72866fb4009aeaf6" compoundref="transmission_8cc" startline="220" endline="234">ruBruteForce</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="transmission_8h_1aee5e234bc1d3de3097033b1b12d5ee0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; ruAllocationOptimal</definition>
+        <argsstring>(std::list&lt; packet &gt; packetsList)</argsstring>
+        <name>ruAllocationOptimal</name>
+        <param>
+          <type>std::list&lt; <ref refid="classpacket" kindref="compound">packet</ref> &gt;</type>
+          <declname>packetsList</declname>
+        </param>
+        <briefdescription>
+<para>Return a vector combines of RuTypes that optimal for packetList. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>packetsList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>given list of packets </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;int&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transmission.h" line="22" column="13" bodyfile="transmission.cc" bodystart="243" bodyend="283" declfile="transmission.h" declline="22" declcolumn="13"/>
+        <references refid="transmission_8cc_1a61b1269a1e66e3f41842d7fe975127e3" compoundref="transmission_8cc" startline="52">maxTones</references>
+        <references refid="transmission_8cc_1a147da8463af38f23f7cc084be4920c1e" compoundref="transmission_8cc" startline="293" endline="305">objectiveFunction</references>
+        <references refid="transmission_8cc_1ac2e8aca1d9459efd72866fb4009aeaf6" compoundref="transmission_8cc" startline="220" endline="234">ruBruteForce</references>
+        <references refid="transmission_8cc_1aba83986fa8a5140d20eca119f48c10df" compoundref="transmission_8cc" startline="52" endline="52">RuType</references>
+        <referencedby refid="transmission_8cc_1a8d89a9539ccc0c3fb5a43f756c60e3d5" compoundref="transmission_8cc" startline="502" endline="619">fifoOFDMAOptimal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="transmission_8h_1a147da8463af38f23f7cc084be4920c1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double objectiveFunction</definition>
+        <argsstring>(std::list&lt; packet &gt; packetsList, std::vector&lt; int &gt; ruList)</argsstring>
+        <name>objectiveFunction</name>
+        <param>
+          <type>std::list&lt; <ref refid="classpacket" kindref="compound">packet</ref> &gt;</type>
+          <declname>packetsList</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>ruList</declname>
+        </param>
+        <briefdescription>
+<para>Calculate objective Function for given packet List and corresponding tones. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>packetsList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of packets </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ruList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of Resource Unit correspond to packet list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;double&gt; Return the Objective Physical Rate for a packet list </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transmission.h" line="24" column="8" bodyfile="transmission.cc" bodystart="293" bodyend="305" declfile="transmission.h" declline="24" declcolumn="8"/>
+        <references refid="transmission_8cc_1ac6d611f7de49524c593519d0425c5a09" compoundref="transmission_8cc" startline="119" endline="146">getTransmissionTimeOfdmaFrame</references>
+        <referencedby refid="transmission_8cc_1a8d89a9539ccc0c3fb5a43f756c60e3d5" compoundref="transmission_8cc" startline="502" endline="619">fifoOFDMAOptimal</referencedby>
+        <referencedby refid="transmission_8cc_1aee5e234bc1d3de3097033b1b12d5ee0c" compoundref="transmission_8cc" startline="243" endline="283">ruAllocationOptimal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="transmission_8h_1ac15752338ea1254dff25c7cb14140a08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getTransmissionTimePayload</definition>
+        <argsstring>(packet aPacket, int ru)</argsstring>
+        <name>getTransmissionTimePayload</name>
+        <param>
+          <type><ref refid="classpacket" kindref="compound">packet</ref></type>
+          <declname>aPacket</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ru</declname>
+        </param>
+        <briefdescription>
+<para>Get the Transmission Time Payload without byteMac (another layer) for a packet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPacket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>given packet </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ru</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>resource unit </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;double&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transmission.h" line="26" column="8" bodyfile="transmission.cc" bodystart="315" bodyend="330" declfile="transmission.h" declline="26" declcolumn="8"/>
+        <references refid="classpacket_1ab6ac239ca93654d87058539f0c2aae80" compoundref="packet_8h" startline="28">packet::m_destination</references>
+        <references refid="classdestination_1a4548881e744673365ee3d134ef54ec87" compoundref="destination_8h" startline="32">destination::m_mcs</references>
+        <references refid="classpacket_1aabf7e3d557441592087d82f797b6e809" compoundref="packet_8h" startline="26">packet::m_size</references>
+        <references refid="transmission_8cc_1aac31c48a4c2a61ab0477cab11fbb766b" compoundref="transmission_8cc" startline="30" endline="43">phyRate</references>
+      </memberdef>
+      <memberdef kind="function" id="transmission_8h_1ab16115ae938d90def3db56ef8c0c87ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double fifo</definition>
+        <argsstring>(std::list&lt; packet &gt; &amp;buffer, double currentTime)</argsstring>
+        <name>fifo</name>
+        <param>
+          <type>std::list&lt; <ref refid="classpacket" kindref="compound">packet</ref> &gt; &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transmission.h" line="28" column="8" declfile="transmission.h" declline="28" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="transmission_8h_1a22f983f29243c20d665bf025aada871e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double fifoAggregation</definition>
+        <argsstring>(std::list&lt; packet &gt; &amp;buffer, double currentTime)</argsstring>
+        <name>fifoAggregation</name>
+        <param>
+          <type>std::list&lt; <ref refid="classpacket" kindref="compound">packet</ref> &gt; &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <briefdescription>
+<para>Calculate transmission time for FIFO Aggregation, FIFO represents the process that you take the first packet in the packet list, check if any packets that have the same destination with the selected packet, aggregate all of thems into a frame called &quot;Jumbo frame&quot;, then sending this jumbo to the corresponding destination, simultaneously erase the packet in the initial buffer. Do this till the buffer empty and calculate the total time for transmit them. CAREFUL: if aggregation happens then no need to increase iterator since after erase() the iterator automatically point to the next item. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of packets </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>currentTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>txOP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Transmission Opportunity: Max time for a transmission occurs </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aggregation_frame_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default max size for an aggregated frame </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frame_header_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of aggregated frame header </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>no_aggregated_pkt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Counter for aggregated packet </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aggregation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag represents aggregation (yes or no) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;double&gt; Transmission time </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transmission.h" line="30" column="8" bodyfile="transmission.cc" bodystart="379" bodyend="487" declfile="transmission.h" declline="30" declcolumn="8"/>
+        <references refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" compoundref="main_8cc" startline="24">buffer</references>
+        <references refid="classpacket_1ab6ac239ca93654d87058539f0c2aae80" compoundref="packet_8h" startline="28">packet::m_destination</references>
+        <references refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" compoundref="destination_8h" startline="31">destination::m_no</references>
+        <references refid="classdestination_1aa6b9d16cc17841618bdb99e056da91f7" compoundref="destination_8h" startline="33">destination::m_phyRate</references>
+        <references refid="classpacket_1aabf7e3d557441592087d82f797b6e809" compoundref="packet_8h" startline="26">packet::m_size</references>
+        <referencedby refid="transmission_8cc_1a95d672e86c3804fea8754cdb7377e49e" compoundref="transmission_8cc" startline="622" endline="635">transmitNextPackets</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="transmission_8h_1a8d89a9539ccc0c3fb5a43f756c60e3d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double fifoOFDMAOptimal</definition>
+        <argsstring>(std::list&lt; packet &gt; &amp;buffer, double currentTime)</argsstring>
+        <name>fifoOFDMAOptimal</name>
+        <param>
+          <type>std::list&lt; <ref refid="classpacket" kindref="compound">packet</ref> &gt; &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <briefdescription>
+<para>Calculate transmission time for FIFO OFDMA Optimal, which sends all packet has different destination in the buffer (cause the paralel, so can not send 2 or more packets to the same destination in the same time) . The combination of sent packet is depend on the Objective Function value of every combination packet in the buffer. FIFO here is the prior process taking the first packet1: Example: [[packet 1], [packet1, packet2], [packet1, packet2, packet3], ...] (each of this packet has different destination) =&gt; The packets combination will be bruteforce with each combination of Resource Unit to find the Optimal Resource Unit combination correspond to packet combination. Do the same sequence with every combination =&gt; Result the most optimal packet combination (biggest Objective Function). Then calculate time for transfer this combination and delete it from initial buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current list of packet queueing </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>currentTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Store the destination of &quot;new destination&quot; packet </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tmpList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temporary list for storing &quot;new destination&quot; packet object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newDestList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of List of packets: [[packet 1], [packet1, packet2], [packet1, packet2, packet3], ...] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;double&gt; Transmission time <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transmission.h" line="32" column="8" bodyfile="transmission.cc" bodystart="502" bodyend="619" declfile="transmission.h" declline="32" declcolumn="8"/>
+        <references refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" compoundref="main_8cc" startline="24">buffer</references>
+        <references refid="main_8cc_1a272038ad264893a568c808f13d818b17" compoundref="main_8cc" startline="19">currentTime</references>
+        <references refid="transmission_8cc_1ac6d611f7de49524c593519d0425c5a09" compoundref="transmission_8cc" startline="119" endline="146">getTransmissionTimeOfdmaFrame</references>
+        <references refid="transmission_8cc_1a400de5a490a25cff56ef1bae861f2ea1" compoundref="transmission_8cc" startline="52">maxClient</references>
+        <references refid="transmission_8cc_1a54eb34961baa3decb1e480234eee0a45" compoundref="transmission_8cc" startline="89" endline="99">newDest</references>
+        <references refid="transmission_8cc_1a147da8463af38f23f7cc084be4920c1e" compoundref="transmission_8cc" startline="293" endline="305">objectiveFunction</references>
+        <references refid="transmission_8cc_1aee5e234bc1d3de3097033b1b12d5ee0c" compoundref="transmission_8cc" startline="243" endline="283">ruAllocationOptimal</references>
+        <references refid="transmission_8cc_1aba83986fa8a5140d20eca119f48c10df" compoundref="transmission_8cc" startline="52" endline="52">RuType</references>
+        <referencedby refid="transmission_8cc_1a95d672e86c3804fea8754cdb7377e49e" compoundref="transmission_8cc" startline="622" endline="635">transmitNextPackets</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="transmission_8h_1ac756511a8c11b7bdd34da37e56c2881c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double fifo_ofdma</definition>
+        <argsstring>(std::list&lt; packet &gt; &amp;buffer)</argsstring>
+        <name>fifo_ofdma</name>
+        <param>
+          <type>std::list&lt; <ref refid="classpacket" kindref="compound">packet</ref> &gt; &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transmission.h" line="34" column="8" declfile="transmission.h" declline="34" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="transmission_8h_1aea69413bba5cf554127cb5ba791e66ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double transmitNextPackets</definition>
+        <argsstring>(int discipline, std::list&lt; packet &gt; &amp;buffer, double currentTime)</argsstring>
+        <name>transmitNextPackets</name>
+        <param>
+          <type>int</type>
+          <declname>discipline</declname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="classpacket" kindref="compound">packet</ref> &gt; &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>currentTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="transmission.h" line="36" column="8" declfile="transmission.h" declline="36" declcolumn="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>TRANSMISSION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRANSMISSION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="packet_8h" kindref="compound">packet.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="destination_8h" kindref="compound">destination.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="transmission_8h_1acac6dc1d91e8b14df7007ddb4e25c58d" kindref="member">alpha_i</ref>(<ref refid="classpacket" kindref="compound">packet</ref><sp/>pkt);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="transmission_8h_1ab7342ed5f6ffba181326149f8dd8bcfa" kindref="member">getMacTransmissionTime</ref>(<ref refid="classpacket" kindref="compound">packet</ref><sp/>aPacket,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbOfBytesMac,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ru);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="transmission_8h_1a54eb34961baa3decb1e480234eee0a45" kindref="member">newDest</ref>(<ref refid="classdestination" kindref="compound">destination</ref><sp/>aDest,<sp/>std::list&lt;destination&gt;<sp/>destList);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="transmission_8h_1ac6d611f7de49524c593519d0425c5a09" kindref="member">getTransmissionTimeOfdmaFrame</ref>(std::list&lt;packet&gt;<sp/>packetsList,<sp/>std::vector&lt;int&gt;<sp/>ruList);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<sp/><ref refid="transmission_8h_1aaa49bc1ad53343dcbe56639d207e83a6" kindref="member">ruAllocation</ref>(std::list&lt;packet&gt;<sp/>pkt_set);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="transmission_8h_1ac2e8aca1d9459efd72866fb4009aeaf6" kindref="member">ruBruteForce</ref>(std::vector&lt;int&gt;<sp/>ru,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noSta,<sp/>std::list&lt;std::vector&lt;int&gt;&gt;<sp/>&amp;ruList);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">std::vector&lt;int&gt;<sp/><ref refid="transmission_8h_1aee5e234bc1d3de3097033b1b12d5ee0c" kindref="member">ruAllocationOptimal</ref>(std::list&lt;packet&gt;<sp/>packetsList);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="transmission_8h_1a147da8463af38f23f7cc084be4920c1e" kindref="member">objectiveFunction</ref>(std::list&lt;packet&gt;<sp/>packetsList,<sp/>std::vector&lt;int&gt;<sp/>ruList);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="transmission_8h_1ac15752338ea1254dff25c7cb14140a08" kindref="member">getTransmissionTimePayload</ref>(<ref refid="classpacket" kindref="compound">packet</ref><sp/>aPacket,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ru);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="transmission_8h_1ab16115ae938d90def3db56ef8c0c87ed" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="transmission_8h_1ab16115ae938d90def3db56ef8c0c87ed" kindref="member">fifo</ref>(std::list&lt;packet&gt;<sp/>&amp;<ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="transmission_8h_1a22f983f29243c20d665bf025aada871e" kindref="member">fifoAggregation</ref>(std::list&lt;packet&gt;<sp/>&amp;<ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="transmission_8h_1a8d89a9539ccc0c3fb5a43f756c60e3d5" kindref="member">fifoOFDMAOptimal</ref>(std::list&lt;packet&gt;<sp/>&amp;<ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="transmission_8h_1ac756511a8c11b7bdd34da37e56c2881c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="transmission_8h_1ac756511a8c11b7bdd34da37e56c2881c" kindref="member">fifo_ofdma</ref>(std::list&lt;packet&gt;<sp/>&amp;<ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="transmission_8h_1aea69413bba5cf554127cb5ba791e66ad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="transmission_8h_1aea69413bba5cf554127cb5ba791e66ad" kindref="member">transmitNextPackets</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>discipline,<sp/>std::list&lt;packet&gt;<sp/>&amp;<ref refid="main_8cc_1a54235a9d73d17314492fc0b6bbe12c10" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="main_8cc_1a272038ad264893a568c808f13d818b17" kindref="member">currentTime</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="transmission.h"/>
+  </compounddef>
+</doxygen>

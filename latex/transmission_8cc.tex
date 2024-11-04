@@ -1,0 +1,502 @@
+\doxysection{transmission.\+cc File Reference}
+\hypertarget{transmission_8cc}{}\label{transmission_8cc}\index{transmission.cc@{transmission.cc}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$spdlog/spdlog.\+h$>$}\newline
+{\ttfamily \#include "{}transmission.\+h"{}}\newline
+Include dependency graph for transmission.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{transmission_8cc_ab7342ed5f6ffba181326149f8dd8bcfa}{get\+Mac\+Transmission\+Time}} (\mbox{\hyperlink{classpacket}{packet}} a\+Packet, int nb\+Of\+Bytes\+Mac, int ru)
+\begin{DoxyCompactList}\small\item\em Get the Mac Transmission Time of a packet (Layer 2\+: Data link layer) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{transmission_8cc_a54eb34961baa3decb1e480234eee0a45}{new\+Dest}} (\mbox{\hyperlink{classdestination}{destination}} a\+Dest, std\+::list$<$ \mbox{\hyperlink{classdestination}{destination}} $>$ dest\+List)
+\begin{DoxyCompactList}\small\item\em Checking if it is a new destination founded or not. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{transmission_8cc_acac6dc1d91e8b14df7007ddb4e25c58d}{alpha\+\_\+i}} (\mbox{\hyperlink{classpacket}{packet}} pkt)
+\begin{DoxyCompactList}\small\item\em Time for transmit a packet. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{transmission_8cc_ac6d611f7de49524c593519d0425c5a09}{get\+Transmission\+Time\+Ofdma\+Frame}} (std\+::list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ packets\+List, std\+::vector$<$ int $>$ ru\+List)
+\begin{DoxyCompactList}\small\item\em Get the Transmission Time Ofdma Frame object. \end{DoxyCompactList}\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{transmission_8cc_aaa49bc1ad53343dcbe56639d207e83a6}{ru\+Allocation}} (std\+::list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ pkt\+\_\+set)
+\item 
+void \mbox{\hyperlink{transmission_8cc_ac2e8aca1d9459efd72866fb4009aeaf6}{ru\+Brute\+Force}} (std\+::vector$<$ int $>$ ru, int no\+Sta, std\+::list$<$ std\+::vector$<$ int $>$ $>$ \&ru\+List)
+\begin{DoxyCompactList}\small\item\em Algorithm for generate all possile combination RU list for packet list. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{transmission_8cc_aee5e234bc1d3de3097033b1b12d5ee0c}{ru\+Allocation\+Optimal}} (std\+::list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ packets\+List)
+\begin{DoxyCompactList}\small\item\em Return a vector combines of Ru\+Types that optimal for packet\+List. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{transmission_8cc_a147da8463af38f23f7cc084be4920c1e}{objective\+Function}} (std\+::list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ packets\+List, std\+::vector$<$ int $>$ ru\+List)
+\begin{DoxyCompactList}\small\item\em Calculate objective Function for given packet List and corresponding tones. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{transmission_8cc_ac15752338ea1254dff25c7cb14140a08}{get\+Transmission\+Time\+Payload}} (\mbox{\hyperlink{classpacket}{packet}} a\+Packet, int ru)
+\begin{DoxyCompactList}\small\item\em Get the Transmission Time Payload without byte\+Mac (another layer) for a packet. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{transmission_8cc_ab2338ac05d15d17fdcd3b6401a6e4508}{fifo}} (list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ \&\mbox{\hyperlink{main_8cc_a54235a9d73d17314492fc0b6bbe12c10}{buffer}}, double \mbox{\hyperlink{main_8cc_a272038ad264893a568c808f13d818b17}{current\+Time}})
+\begin{DoxyCompactList}\small\item\em Calculate transmission time for FIFO. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{transmission_8cc_a22f983f29243c20d665bf025aada871e}{fifo\+Aggregation}} (std\+::list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ \&\mbox{\hyperlink{main_8cc_a54235a9d73d17314492fc0b6bbe12c10}{buffer}}, double \mbox{\hyperlink{main_8cc_a272038ad264893a568c808f13d818b17}{current\+Time}})
+\begin{DoxyCompactList}\small\item\em Calculate transmission time for FIFO Aggregation, FIFO represents the process that you take the first packet in the packet list, check if any packets that have the same destination with the selected packet, aggregate all of thems into a frame called "{}\+Jumbo frame"{}, then sending this jumbo to the corresponding destination, simultaneously erase the packet in the initial buffer. Do this till the buffer empty and calculate the total time for transmit them. CAREFUL\+: if aggregation happens then no need to increase iterator since after erase() the iterator automatically point to the next item. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{transmission_8cc_a8d89a9539ccc0c3fb5a43f756c60e3d5}{fifo\+OFDMAOptimal}} (std\+::list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ \&\mbox{\hyperlink{main_8cc_a54235a9d73d17314492fc0b6bbe12c10}{buffer}}, double \mbox{\hyperlink{main_8cc_a272038ad264893a568c808f13d818b17}{current\+Time}})
+\begin{DoxyCompactList}\small\item\em Calculate transmission time for FIFO OFDMA Optimal, which sends all packet has different destination in the buffer (cause the paralel, so can not send 2 or more packets to the same destination in the same time) . The combination of sent packet is depend on the Objective Function value of every combination packet in the buffer. FIFO here is the prior process taking the first packet1\+: Example\+: \mbox{[}\mbox{[}packet 1\mbox{]}, \mbox{[}packet1, packet2\mbox{]}, \mbox{[}packet1, packet2, packet3\mbox{]}, ...\mbox{]} (each of this packet has different destination) =\texorpdfstring{$>$}{>} The packets combination will be bruteforce with each combination of Resource Unit to find the Optimal Resource Unit combination correspond to packet combination. Do the same sequence with every combination =\texorpdfstring{$>$}{>} Result the most optimal packet combination (biggest Objective Function). Then calculate time for transfer this combination and delete it from initial buffer. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{transmission_8cc_a95d672e86c3804fea8754cdb7377e49e}{transmit\+Next\+Packets}} (int discipline, list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ \&\mbox{\hyperlink{main_8cc_a54235a9d73d17314492fc0b6bbe12c10}{buffer}}, double \mbox{\hyperlink{main_8cc_a272038ad264893a568c808f13d818b17}{current\+Time}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{transmission_8cc_aac31c48a4c2a61ab0477cab11fbb766b}{phy\+Rate}} \mbox{[}12\mbox{]}\mbox{[}7\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of physical rate with special Resource Units. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{transmission_8cc_a8c6223c9cd7962eca294b550f36f159e}{access\+Time\+And\+Ack}} =132.\+0
+\begin{DoxyCompactList}\small\item\em Only 20Hz, maximum tones of resource unit = 242, max number of clients = 9 4 resource unit avaiable\+: 26, 52, 106, 242. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{transmission_8cc_a71b420b9a271ff67fe17d3f93d6a81b1}{bandwidth}} = 20
+\item 
+int \mbox{\hyperlink{transmission_8cc_a61b1269a1e66e3f41842d7fe975127e3}{max\+Tones}} = 242
+\item 
+int \mbox{\hyperlink{transmission_8cc_a400de5a490a25cff56ef1bae861f2ea1}{max\+Client}} = 9
+\item 
+int \mbox{\hyperlink{transmission_8cc_aba83986fa8a5140d20eca119f48c10df}{Ru\+Type}} \mbox{[}4\mbox{]} = \{26, 52, 106, 242\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{transmission_8cc_acac6dc1d91e8b14df7007ddb4e25c58d}\index{transmission.cc@{transmission.cc}!alpha\_i@{alpha\_i}}
+\index{alpha\_i@{alpha\_i}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{alpha\_i()}{alpha\_i()}}
+{\footnotesize\ttfamily \label{transmission_8cc_acac6dc1d91e8b14df7007ddb4e25c58d} 
+double alpha\+\_\+i (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpacket}{packet}}}]{pkt}{}\end{DoxyParamCaption})}
+
+
+
+Time for transmit a packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pkt} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{transmission_8cc_acac6dc1d91e8b14df7007ddb4e25c58d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transmission_8cc_ab2338ac05d15d17fdcd3b6401a6e4508}\index{transmission.cc@{transmission.cc}!fifo@{fifo}}
+\index{fifo@{fifo}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{fifo()}{fifo()}}
+{\footnotesize\ttfamily \label{transmission_8cc_ab2338ac05d15d17fdcd3b6401a6e4508} 
+double fifo (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ \&}]{buffer}{, }\item[{double}]{current\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Calculate transmission time for FIFO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \\
+\hline
+{\em current\+Time} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_ab2338ac05d15d17fdcd3b6401a6e4508_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transmission_8cc_a22f983f29243c20d665bf025aada871e}\index{transmission.cc@{transmission.cc}!fifoAggregation@{fifoAggregation}}
+\index{fifoAggregation@{fifoAggregation}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{fifoAggregation()}{fifoAggregation()}}
+{\footnotesize\ttfamily \label{transmission_8cc_a22f983f29243c20d665bf025aada871e} 
+double fifo\+Aggregation (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ \&}]{buffer}{, }\item[{double}]{current\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Calculate transmission time for FIFO Aggregation, FIFO represents the process that you take the first packet in the packet list, check if any packets that have the same destination with the selected packet, aggregate all of thems into a frame called "{}\+Jumbo frame"{}, then sending this jumbo to the corresponding destination, simultaneously erase the packet in the initial buffer. Do this till the buffer empty and calculate the total time for transmit them. CAREFUL\+: if aggregation happens then no need to increase iterator since after erase() the iterator automatically point to the next item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & List of packets \\
+\hline
+{\em current\+Time} & \\
+\hline
+{\em tx\+OP} & Transmission Opportunity\+: Max time for a transmission occurs \\
+\hline
+{\em aggregation\+\_\+frame\+\_\+size} & Default max size for an aggregated frame \\
+\hline
+{\em frame\+\_\+header\+\_\+size} & Size of aggregated frame header \\
+\hline
+{\em no\+\_\+aggregated\+\_\+pkt} & Counter for aggregated packet \\
+\hline
+{\em aggregation} & Flag represents aggregation (yes or no) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$double$>$ Transmission time 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_a22f983f29243c20d665bf025aada871e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transmission_8cc_a8d89a9539ccc0c3fb5a43f756c60e3d5}\index{transmission.cc@{transmission.cc}!fifoOFDMAOptimal@{fifoOFDMAOptimal}}
+\index{fifoOFDMAOptimal@{fifoOFDMAOptimal}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{fifoOFDMAOptimal()}{fifoOFDMAOptimal()}}
+{\footnotesize\ttfamily \label{transmission_8cc_a8d89a9539ccc0c3fb5a43f756c60e3d5} 
+double fifo\+OFDMAOptimal (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ \&}]{buffer}{, }\item[{double}]{current\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Calculate transmission time for FIFO OFDMA Optimal, which sends all packet has different destination in the buffer (cause the paralel, so can not send 2 or more packets to the same destination in the same time) . The combination of sent packet is depend on the Objective Function value of every combination packet in the buffer. FIFO here is the prior process taking the first packet1\+: Example\+: \mbox{[}\mbox{[}packet 1\mbox{]}, \mbox{[}packet1, packet2\mbox{]}, \mbox{[}packet1, packet2, packet3\mbox{]}, ...\mbox{]} (each of this packet has different destination) =\texorpdfstring{$>$}{>} The packets combination will be bruteforce with each combination of Resource Unit to find the Optimal Resource Unit combination correspond to packet combination. Do the same sequence with every combination =\texorpdfstring{$>$}{>} Result the most optimal packet combination (biggest Objective Function). Then calculate time for transfer this combination and delete it from initial buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Current list of packet queueing \\
+\hline
+{\em current\+Time} & \\
+\hline
+{\em dest\+List} & Store the destination of "{}new destination"{} packet \\
+\hline
+{\em tmp\+List} & Temporary list for storing "{}new destination"{} packet object \\
+\hline
+{\em new\+Dest\+List} & List of List of packets\+: \mbox{[}\mbox{[}packet 1\mbox{]}, \mbox{[}packet1, packet2\mbox{]}, \mbox{[}packet1, packet2, packet3\mbox{]}, ...\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$double$>$ Transmission time ~\newline
+ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_a8d89a9539ccc0c3fb5a43f756c60e3d5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_a8d89a9539ccc0c3fb5a43f756c60e3d5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transmission_8cc_ab7342ed5f6ffba181326149f8dd8bcfa}\index{transmission.cc@{transmission.cc}!getMacTransmissionTime@{getMacTransmissionTime}}
+\index{getMacTransmissionTime@{getMacTransmissionTime}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{getMacTransmissionTime()}{getMacTransmissionTime()}}
+{\footnotesize\ttfamily \label{transmission_8cc_ab7342ed5f6ffba181326149f8dd8bcfa} 
+double get\+Mac\+Transmission\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpacket}{packet}}}]{a\+Packet}{, }\item[{int}]{nb\+Of\+Bytes\+Mac}{, }\item[{int}]{ru}{}\end{DoxyParamCaption})}
+
+
+
+Get the Mac Transmission Time of a packet (Layer 2\+: Data link layer) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Packet} & \\
+\hline
+{\em nb\+Of\+Bytes\+Mac} & ~\newline
+ \\
+\hline
+{\em ru} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_ab7342ed5f6ffba181326149f8dd8bcfa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transmission_8cc_ac6d611f7de49524c593519d0425c5a09}\index{transmission.cc@{transmission.cc}!getTransmissionTimeOfdmaFrame@{getTransmissionTimeOfdmaFrame}}
+\index{getTransmissionTimeOfdmaFrame@{getTransmissionTimeOfdmaFrame}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{getTransmissionTimeOfdmaFrame()}{getTransmissionTimeOfdmaFrame()}}
+{\footnotesize\ttfamily \label{transmission_8cc_ac6d611f7de49524c593519d0425c5a09} 
+double get\+Transmission\+Time\+Ofdma\+Frame (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$}]{packets\+List}{, }\item[{std\+::vector$<$ int $>$}]{ru\+List}{}\end{DoxyParamCaption})}
+
+
+
+Get the Transmission Time Ofdma Frame object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packets\+List} & List of packets \\
+\hline
+{\em ru\+List} & List of Resource Unit that correspond to each packet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$double$>$ Return the max transmition time packet\textquotesingle{}s (cause all packet paralel) 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_ac6d611f7de49524c593519d0425c5a09_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_ac6d611f7de49524c593519d0425c5a09_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transmission_8cc_ac15752338ea1254dff25c7cb14140a08}\index{transmission.cc@{transmission.cc}!getTransmissionTimePayload@{getTransmissionTimePayload}}
+\index{getTransmissionTimePayload@{getTransmissionTimePayload}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{getTransmissionTimePayload()}{getTransmissionTimePayload()}}
+{\footnotesize\ttfamily \label{transmission_8cc_ac15752338ea1254dff25c7cb14140a08} 
+double get\+Transmission\+Time\+Payload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpacket}{packet}}}]{a\+Packet}{, }\item[{int}]{ru}{}\end{DoxyParamCaption})}
+
+
+
+Get the Transmission Time Payload without byte\+Mac (another layer) for a packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Packet} & given packet \\
+\hline
+{\em ru} & resource unit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$double$>$ 
+\end{DoxyReturn}
+\Hypertarget{transmission_8cc_a54eb34961baa3decb1e480234eee0a45}\index{transmission.cc@{transmission.cc}!newDest@{newDest}}
+\index{newDest@{newDest}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{newDest()}{newDest()}}
+{\footnotesize\ttfamily \label{transmission_8cc_a54eb34961baa3decb1e480234eee0a45} 
+int new\+Dest (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdestination}{destination}}}]{a\+Dest}{, }\item[{std\+::list$<$ \mbox{\hyperlink{classdestination}{destination}} $>$}]{dest\+List}{}\end{DoxyParamCaption})}
+
+
+
+Checking if it is a new destination founded or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Dest} & \\
+\hline
+{\em dest\+List} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int (its index if old dest, -\/1 if new dest) 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_a54eb34961baa3decb1e480234eee0a45_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transmission_8cc_a147da8463af38f23f7cc084be4920c1e}\index{transmission.cc@{transmission.cc}!objectiveFunction@{objectiveFunction}}
+\index{objectiveFunction@{objectiveFunction}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{objectiveFunction()}{objectiveFunction()}}
+{\footnotesize\ttfamily \label{transmission_8cc_a147da8463af38f23f7cc084be4920c1e} 
+double objective\+Function (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$}]{packets\+List}{, }\item[{std\+::vector$<$ int $>$}]{ru\+List}{}\end{DoxyParamCaption})}
+
+
+
+Calculate objective Function for given packet List and corresponding tones. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packets\+List} & List of packets \\
+\hline
+{\em ru\+List} & List of Resource Unit correspond to packet list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$double$>$ Return the Objective Physical Rate for a packet list 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_a147da8463af38f23f7cc084be4920c1e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_a147da8463af38f23f7cc084be4920c1e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transmission_8cc_aaa49bc1ad53343dcbe56639d207e83a6}\index{transmission.cc@{transmission.cc}!ruAllocation@{ruAllocation}}
+\index{ruAllocation@{ruAllocation}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{ruAllocation()}{ruAllocation()}}
+{\footnotesize\ttfamily \label{transmission_8cc_aaa49bc1ad53343dcbe56639d207e83a6} 
+int \texorpdfstring{$\ast$}{*} ru\+Allocation (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$}]{pkt\+\_\+set}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{transmission_8cc_aaa49bc1ad53343dcbe56639d207e83a6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transmission_8cc_aee5e234bc1d3de3097033b1b12d5ee0c}\index{transmission.cc@{transmission.cc}!ruAllocationOptimal@{ruAllocationOptimal}}
+\index{ruAllocationOptimal@{ruAllocationOptimal}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{ruAllocationOptimal()}{ruAllocationOptimal()}}
+{\footnotesize\ttfamily \label{transmission_8cc_aee5e234bc1d3de3097033b1b12d5ee0c} 
+std\+::vector$<$ int $>$ ru\+Allocation\+Optimal (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$}]{packets\+List}{}\end{DoxyParamCaption})}
+
+
+
+Return a vector combines of Ru\+Types that optimal for packet\+List. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packets\+List} & given list of packets \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$int$>$ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_aee5e234bc1d3de3097033b1b12d5ee0c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_aee5e234bc1d3de3097033b1b12d5ee0c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transmission_8cc_ac2e8aca1d9459efd72866fb4009aeaf6}\index{transmission.cc@{transmission.cc}!ruBruteForce@{ruBruteForce}}
+\index{ruBruteForce@{ruBruteForce}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{ruBruteForce()}{ruBruteForce()}}
+{\footnotesize\ttfamily \label{transmission_8cc_ac2e8aca1d9459efd72866fb4009aeaf6} 
+void ru\+Brute\+Force (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{ru}{, }\item[{int}]{no\+Sta}{, }\item[{std\+::list$<$ std\+::vector$<$ int $>$ $>$ \&}]{ru\+List}{}\end{DoxyParamCaption})}
+
+
+
+Algorithm for generate all possile combination RU list for packet list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ru} & blank vector at beginning \\
+\hline
+{\em no\+Sta} & number of packet -\/ 1 \\
+\hline
+{\em ru\+List} & list of vector of value of Ru index (A reference to a list where all possible combinations of RU allocations will be stored.) \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{transmission_8cc_ac2e8aca1d9459efd72866fb4009aeaf6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_ac2e8aca1d9459efd72866fb4009aeaf6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transmission_8cc_a95d672e86c3804fea8754cdb7377e49e}\index{transmission.cc@{transmission.cc}!transmitNextPackets@{transmitNextPackets}}
+\index{transmitNextPackets@{transmitNextPackets}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{transmitNextPackets()}{transmitNextPackets()}}
+{\footnotesize\ttfamily \label{transmission_8cc_a95d672e86c3804fea8754cdb7377e49e} 
+double transmit\+Next\+Packets (\begin{DoxyParamCaption}\item[{int}]{discipline}{, }\item[{list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ \&}]{buffer}{, }\item[{double}]{current\+Time}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_a95d672e86c3804fea8754cdb7377e49e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transmission_8cc_a95d672e86c3804fea8754cdb7377e49e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{transmission_8cc_a8c6223c9cd7962eca294b550f36f159e}\index{transmission.cc@{transmission.cc}!accessTimeAndAck@{accessTimeAndAck}}
+\index{accessTimeAndAck@{accessTimeAndAck}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{accessTimeAndAck}{accessTimeAndAck}}
+{\footnotesize\ttfamily \label{transmission_8cc_a8c6223c9cd7962eca294b550f36f159e} 
+double access\+Time\+And\+Ack =132.\+0}
+
+
+
+Only 20Hz, maximum tones of resource unit = 242, max number of clients = 9 4 resource unit avaiable\+: 26, 52, 106, 242. 
+
+\Hypertarget{transmission_8cc_a71b420b9a271ff67fe17d3f93d6a81b1}\index{transmission.cc@{transmission.cc}!bandwidth@{bandwidth}}
+\index{bandwidth@{bandwidth}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{bandwidth}{bandwidth}}
+{\footnotesize\ttfamily \label{transmission_8cc_a71b420b9a271ff67fe17d3f93d6a81b1} 
+int bandwidth = 20}
+
+\Hypertarget{transmission_8cc_a400de5a490a25cff56ef1bae861f2ea1}\index{transmission.cc@{transmission.cc}!maxClient@{maxClient}}
+\index{maxClient@{maxClient}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{maxClient}{maxClient}}
+{\footnotesize\ttfamily \label{transmission_8cc_a400de5a490a25cff56ef1bae861f2ea1} 
+int max\+Client = 9}
+
+\Hypertarget{transmission_8cc_a61b1269a1e66e3f41842d7fe975127e3}\index{transmission.cc@{transmission.cc}!maxTones@{maxTones}}
+\index{maxTones@{maxTones}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{maxTones}{maxTones}}
+{\footnotesize\ttfamily \label{transmission_8cc_a61b1269a1e66e3f41842d7fe975127e3} 
+int max\+Tones = 242}
+
+\Hypertarget{transmission_8cc_aac31c48a4c2a61ab0477cab11fbb766b}\index{transmission.cc@{transmission.cc}!phyRate@{phyRate}}
+\index{phyRate@{phyRate}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{phyRate}{phyRate}}
+{\footnotesize\ttfamily \label{transmission_8cc_aac31c48a4c2a61ab0477cab11fbb766b} 
+double phy\+Rate\mbox{[}12\mbox{]}\mbox{[}7\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{0.9,\ \ \ 1.8,\ \ \ \ 3.8,\ \ \ \ 8.6,\ \ \ \ 17.2,\ \ \ 36.0,\ \ \ 72.1\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{1.8,\ \ \ 3.5,\ \ \ \ 7.5,\ \ \ \ 17.2,\ \ \ 34.4,\ \ \ 72.1,\ \ \ 144.1\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{2.6,\ \ \ 5.3,\ \ \ \ 11.3,\ \ \ 25.8,\ \ \ 51.6,\ \ \ 108.1,\ \ 216.2\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{3.5,\ \ \ 7.1,\ \ \ \ 15.0,\ \ \ 34.4,\ \ \ 68.8,\ \ \ 144.1,\ \ 288.2\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{5.3,\ \ \ 10.6,\ \ \ 22.5,\ \ \ 51.6,\ \ \ 103.2,\ \ 216.2,\ \ 432.4\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{7.1,\ \ \ 14.1,\ \ \ 30.0,\ \ \ 68.8,\ \ \ 137.6,\ \ 288.2,\ \ 576.5\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{7.9,\ \ \ 15.9,\ \ \ 33.8,\ \ \ 77.4,\ \ \ 154.9,\ \ 324.3,\ \ 648.5\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{8.8,\ \ \ 17.6,\ \ \ 37.5,\ \ \ 86.0,\ \ \ 172.1,\ \ 360.3,\ \ 720.6\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{10.6,\ \ 21.2,\ \ \ 45.0,\ \ \ 103.2,\ \ 206.5,\ \ 432.4,\ \ 864.7\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{11.8,\ \ 23.5,\ \ \ 50.0,\ \ \ 114.7,\ \ 229.4,\ \ 480.4,\ \ 960.7\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{-\/1.0,\ \ -\/1.0,\ \ \ -\/1.0,\ \ \ 129.0,\ \ 258.1,\ \ 540.4,\ \ 1080.9\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{-\/1.0,\ \ -\/1.0,\ \ \ -\/1.0,\ \ \ 143.4,\ \ 286.8,\ \ 600.4,\ \ 1201.0\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+List of physical rate with special Resource Units. 
+
+\Hypertarget{transmission_8cc_aba83986fa8a5140d20eca119f48c10df}\index{transmission.cc@{transmission.cc}!RuType@{RuType}}
+\index{RuType@{RuType}!transmission.cc@{transmission.cc}}
+\doxysubsubsection{\texorpdfstring{RuType}{RuType}}
+{\footnotesize\ttfamily \label{transmission_8cc_aba83986fa8a5140d20eca119f48c10df} 
+int Ru\+Type\mbox{[}4\mbox{]} = \{26, 52, 106, 242\}}
+

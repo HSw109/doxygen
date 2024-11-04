@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="event_8cc" kind="file" language="C++">
+    <compoundname>event.cc</compoundname>
+    <includes local="no">iostream</includes>
+    <includes refid="event_8h" local="yes">event.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>destination.h</label>
+        <link refid="destination_8h"/>
+      </node>
+      <node id="1">
+        <label>event.cc</label>
+        <link refid="event_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>event.h</label>
+        <link refid="event_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="event_8cc_1a9cb379690ae9bc9b599bf5170b978db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const event &amp;evt)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classevent" kindref="compound">event</ref> &amp;</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+<para>Shortcut of operator &quot;&lt;&lt;&quot; (for printing event details) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="event.cc" line="10" column="1" bodyfile="event.cc" bodystart="10" bodyend="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="event_8h" kindref="compound">event.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classevent_1a9cb379690ae9bc9b599bf5170b978db0" refkind="member"><highlight class="normal">std::ostream&amp;<sp/><ref refid="event_8cc_1a9cb379690ae9bc9b599bf5170b978db0" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classevent" kindref="compound">event</ref>&amp;<sp/>evt)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>evt.<ref refid="classevent_1a225755cc86473cfa846e0916f1a14673" kindref="member">m_type</ref>==0<sp/>)<sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Event:<sp/>arrival<sp/>/<sp/>&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Event:<sp/>transmission<sp/>/<sp/>&quot;</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;dest=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>evt.<ref refid="classevent_1a197ccc178fba5962fe0befb78782cfb7" kindref="member">m_dest</ref>.<ref refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" kindref="member">m_no</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>/<sp/>time<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>evt.<ref refid="classevent_1a6cdac5ba9e878cb82656bd1cc50f832e" kindref="member">m_time</ref><sp/>&lt;&lt;<sp/>endl;;<sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>data<sp/>of<sp/>this<sp/>event<sp/>(transmission<sp/>or<sp/>arrival)<sp/>and<sp/>time<sp/>this<sp/>event<sp/>occur</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constructor</highlight></codeline>
+<codeline lineno="27" refid="classevent_1ab54feb625799baa41b05e8737aab581b" refkind="member"><highlight class="normal"><ref refid="classevent_1ab54feb625799baa41b05e8737aab581b" kindref="member">event::event</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/><ref refid="classdestination" kindref="compound">destination</ref><sp/>dest,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classevent_1a225755cc86473cfa846e0916f1a14673" kindref="member">m_type</ref><sp/><sp/>=<sp/>type;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classevent_1a197ccc178fba5962fe0befb78782cfb7" kindref="member">m_dest</ref><sp/><sp/>=<sp/>dest;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classevent_1a6cdac5ba9e878cb82656bd1cc50f832e" kindref="member">m_time</ref><sp/><sp/>=<sp/>time;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classevent_1a9027354d797205dd1369b46f3485b8c4" refkind="member"><highlight class="normal"><ref refid="classevent_1a9027354d797205dd1369b46f3485b8c4" kindref="member">event::~event</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classevent_1abb86e9c16cba8f886a22ba65403ef729" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevent_1abb86e9c16cba8f886a22ba65403ef729" kindref="member">event::print</ref>()<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classevent_1a225755cc86473cfa846e0916f1a14673" kindref="member">m_type</ref><sp/>==<sp/>0)<sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Arrival<sp/>event<sp/>/<sp/>&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Transmission<sp/>event<sp/>/<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;dest<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;<ref refid="classevent_1a197ccc178fba5962fe0befb78782cfb7" kindref="member">m_dest</ref>.<ref refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" kindref="member">m_no</ref>&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>/time<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;<ref refid="classevent_1a6cdac5ba9e878cb82656bd1cc50f832e" kindref="member">m_time</ref>&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="event.cc"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,27 @@
+\doxysection{destination.\+h}
+\hypertarget{destination_8h_source}{}\label{destination_8h_source}\mbox{\hyperlink{destination_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DESTINATION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DESTINATION\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdestination}{destination}}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{classdestination_a423b9008ebc7659776c323fd4c8250cc}{m\_no}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//destination\ address:\ 1,\ 2,\ etc.}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{classdestination_a4548881e744673365ee3d134ef54ec87}{m\_mcs}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//MCS\ index}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{classdestination_aa6b9d16cc17841618bdb99e056da91f7}{m\_phyRate}};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Physical\ Trans\ Rate\ (Mbit/s)\ }}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{classdestination_ace450746c6ca7ab6873a700033bf7be5}{m\_arrivalRate}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Number\ of\ packet\ per\ second\ for\ this\ source}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{classdestination_a81c79bd3652ae7257bf97425b8bea4a8}{m\_arrivalDistribution}};\ \textcolor{comment}{//\ describe\ the\ time\ intervals\ between\ events\ in\ a\ process.\ }}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Type\ of\ distribution\ for\ the\ interarrival:\ Deterministic\ (0)\ time\ between\ events\ is\ constant,}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Poisson(1),\ etc.:\ random\ events\ that\ occur\ independently\ and\ with\ a\ constant\ average\ rate.\ }}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//phyRate\ will\ be\ set\ according\ to\ the\ mcs\ in\ the\ constructor\ (in\ the\ .cc\ file)}}
+\DoxyCodeLine{00040\ \mbox{\hyperlink{classdestination_ab62577976674a1c7ced33cf6d7528ecc}{destination}}\ (\textcolor{keywordtype}{int}\ no=0,\ \textcolor{keywordtype}{int}\ mcs=0,\ \textcolor{keywordtype}{double}\ arrivalRate=1.0,\ \textcolor{keywordtype}{int}\ arrivalType=0);\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \textcolor{comment}{//MCS\ is\ not\ specified\ here\ (we\ can\ put\ whatever\ we\ want\ for\ the\ phyRate)\ //A\ recoder\ pour\ prendre\ en\ compte\ les\ autres...}}
+\DoxyCodeLine{00042\ \mbox{\hyperlink{classdestination_ab62577976674a1c7ced33cf6d7528ecc}{destination}}\ (\textcolor{keywordtype}{double}\ \mbox{\hyperlink{transmission_8cc_aac31c48a4c2a61ab0477cab11fbb766b}{phyRate}},\ \textcolor{keywordtype}{int}\ no,\ \textcolor{keywordtype}{double}\ arrivalRate,\ \textcolor{keywordtype}{int}\ arrivalType);}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classdestination_a017f9cb30b45ac08492ee3520f42a292}{operator==}}(\mbox{\hyperlink{classdestination}{destination}}\ \&aDest);}
+\DoxyCodeLine{00044\ \mbox{\hyperlink{classdestination_ac65201dc2528eb8fed4a657cd7f4eae1}{\string~destination}}\ ();}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

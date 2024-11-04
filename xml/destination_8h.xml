@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="destination_8h" kind="file" language="C++">
+    <compoundname>destination.h</compoundname>
+    <includedby refid="destination_8cc" local="yes">destination.cc</includedby>
+    <includedby refid="event_8h" local="yes">event.h</includedby>
+    <includedby refid="main_8cc" local="yes">main.cc</includedby>
+    <includedby refid="packet_8h" local="yes">packet.h</includedby>
+    <includedby refid="transmission_8h" local="yes">transmission.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>destination.cc</label>
+        <link refid="destination_8cc"/>
+      </node>
+      <node id="1">
+        <label>destination.h</label>
+        <link refid="destination_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>event.cc</label>
+        <link refid="event_8cc"/>
+      </node>
+      <node id="3">
+        <label>event.h</label>
+        <link refid="event_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>main.cc</label>
+        <link refid="main_8cc"/>
+      </node>
+      <node id="7">
+        <label>packet.cc</label>
+        <link refid="packet_8cc"/>
+      </node>
+      <node id="6">
+        <label>packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>transmission.cc</label>
+        <link refid="transmission_8cc"/>
+      </node>
+      <node id="8">
+        <label>transmission.h</label>
+        <link refid="transmission_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classdestination" prot="public">destination</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DESTINATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DESTINATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classdestination" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdestination" kindref="compound">destination</ref><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31" refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" kindref="member">m_no</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//destination<sp/>address:<sp/>1,<sp/>2,<sp/>etc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classdestination_1a4548881e744673365ee3d134ef54ec87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="classdestination_1a4548881e744673365ee3d134ef54ec87" kindref="member">m_mcs</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//MCS<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classdestination_1aa6b9d16cc17841618bdb99e056da91f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><ref refid="classdestination_1aa6b9d16cc17841618bdb99e056da91f7" kindref="member">m_phyRate</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Physical<sp/>Trans<sp/>Rate<sp/>(Mbit/s)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classdestination_1ace450746c6ca7ab6873a700033bf7be5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><ref refid="classdestination_1ace450746c6ca7ab6873a700033bf7be5" kindref="member">m_arrivalRate</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Number<sp/>of<sp/>packet<sp/>per<sp/>second<sp/>for<sp/>this<sp/>source</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classdestination_1a81c79bd3652ae7257bf97425b8bea4a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="classdestination_1a81c79bd3652ae7257bf97425b8bea4a8" kindref="member">m_arrivalDistribution</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>describe<sp/>the<sp/>time<sp/>intervals<sp/>between<sp/>events<sp/>in<sp/>a<sp/>process.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Type<sp/>of<sp/>distribution<sp/>for<sp/>the<sp/>interarrival:<sp/>Deterministic<sp/>(0)<sp/>time<sp/>between<sp/>events<sp/>is<sp/>constant,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Poisson(1),<sp/>etc.:<sp/>random<sp/>events<sp/>that<sp/>occur<sp/>independently<sp/>and<sp/>with<sp/>a<sp/>constant<sp/>average<sp/>rate.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//phyRate<sp/>will<sp/>be<sp/>set<sp/>according<sp/>to<sp/>the<sp/>mcs<sp/>in<sp/>the<sp/>constructor<sp/>(in<sp/>the<sp/>.cc<sp/>file)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="classdestination_1ab62577976674a1c7ced33cf6d7528ecc" kindref="member">destination</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>no=0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mcs=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arrivalRate=1.0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arrivalType=0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//MCS<sp/>is<sp/>not<sp/>specified<sp/>here<sp/>(we<sp/>can<sp/>put<sp/>whatever<sp/>we<sp/>want<sp/>for<sp/>the<sp/>phyRate)<sp/>//A<sp/>recoder<sp/>pour<sp/>prendre<sp/>en<sp/>compte<sp/>les<sp/>autres...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><ref refid="classdestination_1ab62577976674a1c7ced33cf6d7528ecc" kindref="member">destination</ref><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="transmission_8cc_1aac31c48a4c2a61ab0477cab11fbb766b" kindref="member">phyRate</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>no,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arrivalRate,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arrivalType);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdestination_1a017f9cb30b45ac08492ee3520f42a292" kindref="member">operator==</ref>(<ref refid="classdestination" kindref="compound">destination</ref><sp/>&amp;aDest);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="classdestination_1ac65201dc2528eb8fed4a657cd7f4eae1" kindref="member">~destination</ref><sp/>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="destination.h"/>
+  </compounddef>
+</doxygen>

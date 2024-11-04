@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classdestination" kind="class" language="C++" prot="public">
+    <compoundname>destination</compoundname>
+    <includes refid="destination_8h" local="no">destination.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classdestination_1a423b9008ebc7659776c323fd4c8250cc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int destination::m_no</definition>
+        <argsstring></argsstring>
+        <name>m_no</name>
+        <qualifiedname>destination::m_no</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="destination.h" line="31" column="4" bodyfile="destination.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classdestination_1af5aa20147c29328b11d37520449543a9" compoundref="destination_8cc" startline="77" endline="84">destination</referencedby>
+        <referencedby refid="classdestination_1ab62577976674a1c7ced33cf6d7528ecc" compoundref="destination_8cc" startline="41" endline="65">destination</referencedby>
+        <referencedby refid="transmission_8cc_1ab2338ac05d15d17fdcd3b6401a6e4508" compoundref="transmission_8cc" startline="339" endline="362">fifo</referencedby>
+        <referencedby refid="transmission_8cc_1a22f983f29243c20d665bf025aada871e" compoundref="transmission_8cc" startline="379" endline="487">fifoAggregation</referencedby>
+        <referencedby refid="main_8cc_1a6038201223d2d33b5dad7932cdb3d28a" compoundref="main_8cc" startline="73" endline="87">insertEvent</referencedby>
+        <referencedby refid="transmission_8cc_1a54eb34961baa3decb1e480234eee0a45" compoundref="transmission_8cc" startline="89" endline="99">newDest</referencedby>
+        <referencedby refid="classdestination_1a017f9cb30b45ac08492ee3520f42a292" compoundref="destination_8cc" startline="94" endline="102">operator==</referencedby>
+        <referencedby refid="classevent_1abb86e9c16cba8f886a22ba65403ef729" compoundref="event_8cc" startline="44" endline="48">event::print</referencedby>
+        <referencedby refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" compoundref="main_8cc" startline="165" endline="272">simulateQueue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdestination_1a4548881e744673365ee3d134ef54ec87" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int destination::m_mcs</definition>
+        <argsstring></argsstring>
+        <name>m_mcs</name>
+        <qualifiedname>destination::m_mcs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="destination.h" line="32" column="4" bodyfile="destination.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classdestination_1af5aa20147c29328b11d37520449543a9" compoundref="destination_8cc" startline="77" endline="84">destination</referencedby>
+        <referencedby refid="classdestination_1ab62577976674a1c7ced33cf6d7528ecc" compoundref="destination_8cc" startline="41" endline="65">destination</referencedby>
+        <referencedby refid="transmission_8cc_1ab7342ed5f6ffba181326149f8dd8bcfa" compoundref="transmission_8cc" startline="66" endline="81">getMacTransmissionTime</referencedby>
+        <referencedby refid="transmission_8cc_1ac15752338ea1254dff25c7cb14140a08" compoundref="transmission_8cc" startline="315" endline="330">getTransmissionTimePayload</referencedby>
+        <referencedby refid="classdestination_1a017f9cb30b45ac08492ee3520f42a292" compoundref="destination_8cc" startline="94" endline="102">operator==</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdestination_1aa6b9d16cc17841618bdb99e056da91f7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double destination::m_phyRate</definition>
+        <argsstring></argsstring>
+        <name>m_phyRate</name>
+        <qualifiedname>destination::m_phyRate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="destination.h" line="33" column="7" bodyfile="destination.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="transmission_8cc_1acac6dc1d91e8b14df7007ddb4e25c58d" compoundref="transmission_8cc" startline="107" endline="110">alpha_i</referencedby>
+        <referencedby refid="classdestination_1af5aa20147c29328b11d37520449543a9" compoundref="destination_8cc" startline="77" endline="84">destination</referencedby>
+        <referencedby refid="classdestination_1ab62577976674a1c7ced33cf6d7528ecc" compoundref="destination_8cc" startline="41" endline="65">destination</referencedby>
+        <referencedby refid="transmission_8cc_1ab2338ac05d15d17fdcd3b6401a6e4508" compoundref="transmission_8cc" startline="339" endline="362">fifo</referencedby>
+        <referencedby refid="transmission_8cc_1a22f983f29243c20d665bf025aada871e" compoundref="transmission_8cc" startline="379" endline="487">fifoAggregation</referencedby>
+        <referencedby refid="classdestination_1a017f9cb30b45ac08492ee3520f42a292" compoundref="destination_8cc" startline="94" endline="102">operator==</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdestination_1ace450746c6ca7ab6873a700033bf7be5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double destination::m_arrivalRate</definition>
+        <argsstring></argsstring>
+        <name>m_arrivalRate</name>
+        <qualifiedname>destination::m_arrivalRate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="destination.h" line="34" column="7" bodyfile="destination.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="main_8cc_1a2be16db840defa7a42b72ec0320ebb28" compoundref="main_8cc" startline="98" endline="120">addNextArrival</referencedby>
+        <referencedby refid="classdestination_1af5aa20147c29328b11d37520449543a9" compoundref="destination_8cc" startline="77" endline="84">destination</referencedby>
+        <referencedby refid="classdestination_1ab62577976674a1c7ced33cf6d7528ecc" compoundref="destination_8cc" startline="41" endline="65">destination</referencedby>
+        <referencedby refid="classdestination_1a017f9cb30b45ac08492ee3520f42a292" compoundref="destination_8cc" startline="94" endline="102">operator==</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdestination_1a81c79bd3652ae7257bf97425b8bea4a8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int destination::m_arrivalDistribution</definition>
+        <argsstring></argsstring>
+        <name>m_arrivalDistribution</name>
+        <qualifiedname>destination::m_arrivalDistribution</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="destination.h" line="35" column="4" bodyfile="destination.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="main_8cc_1a2be16db840defa7a42b72ec0320ebb28" compoundref="main_8cc" startline="98" endline="120">addNextArrival</referencedby>
+        <referencedby refid="classdestination_1af5aa20147c29328b11d37520449543a9" compoundref="destination_8cc" startline="77" endline="84">destination</referencedby>
+        <referencedby refid="classdestination_1ab62577976674a1c7ced33cf6d7528ecc" compoundref="destination_8cc" startline="41" endline="65">destination</referencedby>
+        <referencedby refid="classdestination_1a017f9cb30b45ac08492ee3520f42a292" compoundref="destination_8cc" startline="94" endline="102">operator==</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdestination_1ab62577976674a1c7ced33cf6d7528ecc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>destination::destination</definition>
+        <argsstring>(int no=0, int mcs=0, double arrivalRate=1.0, int arrivalType=0)</argsstring>
+        <name>destination</name>
+        <qualifiedname>destination::destination</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>no</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mcs</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>arrivalRate</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>arrivalType</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classdestination_1ab62577976674a1c7ced33cf6d7528ecc" kindref="member">destination::destination</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>no</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_destination" kindref="compound">Destination</ref> address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mcs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>How bits are mapped </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arrivalRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of packet transfered in a second </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arrivalType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Deterministic (0) or Poisson (1) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="destination.h" line="40" column="1" bodyfile="destination.cc" bodystart="41" bodyend="65"/>
+        <references refid="classdestination_1a81c79bd3652ae7257bf97425b8bea4a8" compoundref="destination_8h" startline="35">m_arrivalDistribution</references>
+        <references refid="classdestination_1ace450746c6ca7ab6873a700033bf7be5" compoundref="destination_8h" startline="34">m_arrivalRate</references>
+        <references refid="classdestination_1a4548881e744673365ee3d134ef54ec87" compoundref="destination_8h" startline="32">m_mcs</references>
+        <references refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" compoundref="destination_8h" startline="31">m_no</references>
+        <references refid="classdestination_1aa6b9d16cc17841618bdb99e056da91f7" compoundref="destination_8h" startline="33">m_phyRate</references>
+      </memberdef>
+      <memberdef kind="function" id="classdestination_1af5aa20147c29328b11d37520449543a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>destination::destination</definition>
+        <argsstring>(double phyRate, int no, double arrivalRate, int arrivalType)</argsstring>
+        <name>destination</name>
+        <qualifiedname>destination::destination</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>phyRate</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>no</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>arrivalRate</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>arrivalType</declname>
+        </param>
+        <briefdescription>
+<para>Constructor overloading a new <ref refid="classdestination_1ab62577976674a1c7ced33cf6d7528ecc" kindref="member">destination::destination</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>phyRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Custom physical rate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>no</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_destination" kindref="compound">Destination</ref> address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arrivalRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of packet transfered per seconds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arrivalType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Deterministic (0) or Poisson (1) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="destination.h" line="42" column="1" bodyfile="destination.cc" bodystart="77" bodyend="84"/>
+        <references refid="classdestination_1a81c79bd3652ae7257bf97425b8bea4a8" compoundref="destination_8h" startline="35">m_arrivalDistribution</references>
+        <references refid="classdestination_1ace450746c6ca7ab6873a700033bf7be5" compoundref="destination_8h" startline="34">m_arrivalRate</references>
+        <references refid="classdestination_1a4548881e744673365ee3d134ef54ec87" compoundref="destination_8h" startline="32">m_mcs</references>
+        <references refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" compoundref="destination_8h" startline="31">m_no</references>
+        <references refid="classdestination_1aa6b9d16cc17841618bdb99e056da91f7" compoundref="destination_8h" startline="33">m_phyRate</references>
+        <references refid="transmission_8cc_1aac31c48a4c2a61ab0477cab11fbb766b" compoundref="transmission_8cc" startline="30" endline="43">phyRate</references>
+      </memberdef>
+      <memberdef kind="function" id="classdestination_1a017f9cb30b45ac08492ee3520f42a292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool destination::operator==</definition>
+        <argsstring>(destination &amp;aDest)</argsstring>
+        <name>operator==</name>
+        <qualifiedname>destination::operator==</qualifiedname>
+        <param>
+          <type><ref refid="classdestination" kindref="compound">destination</ref> &amp;</type>
+          <declname>aDest</declname>
+        </param>
+        <briefdescription>
+<para>Comparision. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aDest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Given destination </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="destination.h" line="43" column="6" bodyfile="destination.cc" bodystart="94" bodyend="102"/>
+        <references refid="classdestination_1a81c79bd3652ae7257bf97425b8bea4a8" compoundref="destination_8h" startline="35">m_arrivalDistribution</references>
+        <references refid="classdestination_1ace450746c6ca7ab6873a700033bf7be5" compoundref="destination_8h" startline="34">m_arrivalRate</references>
+        <references refid="classdestination_1a4548881e744673365ee3d134ef54ec87" compoundref="destination_8h" startline="32">m_mcs</references>
+        <references refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" compoundref="destination_8h" startline="31">m_no</references>
+        <references refid="classdestination_1aa6b9d16cc17841618bdb99e056da91f7" compoundref="destination_8h" startline="33">m_phyRate</references>
+      </memberdef>
+      <memberdef kind="function" id="classdestination_1ac65201dc2528eb8fed4a657cd7f4eae1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>destination::~destination</definition>
+        <argsstring>()</argsstring>
+        <name>~destination</name>
+        <qualifiedname>destination::~destination</qualifiedname>
+        <briefdescription>
+<para>Destroy the <ref refid="classdestination_1ab62577976674a1c7ced33cf6d7528ecc" kindref="member">destination::destination</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="destination.h" line="44" column="1" bodyfile="destination.cc" bodystart="108" bodyend="108"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>destination</label>
+        <link refid="classdestination"/>
+      </node>
+    </collaborationgraph>
+    <location file="destination.h" line="29" column="1" bodyfile="destination.h" bodystart="29" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classdestination_1ab62577976674a1c7ced33cf6d7528ecc" prot="public" virt="non-virtual"><scope>destination</scope><name>destination</name></member>
+      <member refid="classdestination_1af5aa20147c29328b11d37520449543a9" prot="public" virt="non-virtual"><scope>destination</scope><name>destination</name></member>
+      <member refid="classdestination_1a81c79bd3652ae7257bf97425b8bea4a8" prot="public" virt="non-virtual"><scope>destination</scope><name>m_arrivalDistribution</name></member>
+      <member refid="classdestination_1ace450746c6ca7ab6873a700033bf7be5" prot="public" virt="non-virtual"><scope>destination</scope><name>m_arrivalRate</name></member>
+      <member refid="classdestination_1a4548881e744673365ee3d134ef54ec87" prot="public" virt="non-virtual"><scope>destination</scope><name>m_mcs</name></member>
+      <member refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" prot="public" virt="non-virtual"><scope>destination</scope><name>m_no</name></member>
+      <member refid="classdestination_1aa6b9d16cc17841618bdb99e056da91f7" prot="public" virt="non-virtual"><scope>destination</scope><name>m_phyRate</name></member>
+      <member refid="classdestination_1a017f9cb30b45ac08492ee3520f42a292" prot="public" virt="non-virtual"><scope>destination</scope><name>operator==</name></member>
+      <member refid="classdestination_1ac65201dc2528eb8fed4a657cd7f4eae1" prot="public" virt="non-virtual"><scope>destination</scope><name>~destination</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

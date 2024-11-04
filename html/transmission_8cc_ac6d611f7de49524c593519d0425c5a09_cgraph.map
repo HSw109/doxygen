@@ -1,0 +1,5 @@
+<map id="getTransmissionTimeOfdmaFrame" name="getTransmissionTimeOfdmaFrame">
+<area shape="rect" id="Node000001" title="Get the Transmission Time Ofdma Frame object." alt="" coords="5,5,191,48"/>
+<area shape="rect" id="Node000002" href="$transmission_8cc.html#ab7342ed5f6ffba181326149f8dd8bcfa" title="Get the Mac Transmission Time of a packet (Layer 2: Data link layer)" alt="" coords="239,13,410,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,24,223,24,223,29,191,29"/>
+</map>

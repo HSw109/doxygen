@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="packet_8h" kind="file" language="C++">
+    <compoundname>packet.h</compoundname>
+    <includes refid="destination_8h" local="yes">destination.h</includes>
+    <includedby refid="main_8cc" local="yes">main.cc</includedby>
+    <includedby refid="packet_8cc" local="yes">packet.cc</includedby>
+    <includedby refid="transmission_8h" local="yes">transmission.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>destination.h</label>
+        <link refid="destination_8h"/>
+      </node>
+      <node id="1">
+        <label>packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>main.cc</label>
+        <link refid="main_8cc"/>
+      </node>
+      <node id="3">
+        <label>packet.cc</label>
+        <link refid="packet_8cc"/>
+      </node>
+      <node id="1">
+        <label>packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>transmission.cc</label>
+        <link refid="transmission_8cc"/>
+      </node>
+      <node id="4">
+        <label>transmission.h</label>
+        <link refid="transmission_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classpacket" prot="public">packet</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PACKET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PACKET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="destination_8h" kindref="compound">destination.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classpacket" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classpacket" kindref="compound">packet</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="classpacket_1aabf7e3d557441592087d82f797b6e809" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpacket_1aabf7e3d557441592087d82f797b6e809" kindref="member">m_size</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//size<sp/>in<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classpacket_1a28d79baa3b5bfb62fe40c5ac1c0af1f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpacket_1a28d79baa3b5bfb62fe40c5ac1c0af1f6" kindref="member">m_arrival</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//arrival<sp/>time<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classpacket_1ab6ac239ca93654d87058539f0c2aae80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdestination" kindref="compound">destination</ref><sp/><ref refid="classpacket_1ab6ac239ca93654d87058539f0c2aae80" kindref="member">m_destination</ref>;<sp/></highlight><highlight class="comment">//integer<sp/>that<sp/>identifies<sp/>the<sp/>destination</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpacket_1ad95bdce2542d99fb3c3568b0db27370d" kindref="member">packet</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arrival,<sp/><ref refid="classdestination" kindref="compound">destination</ref><sp/>dest);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classpacket_1a10bdaf10787afe1906641c09b1a2b178" kindref="member">operator==</ref>(<ref refid="classpacket" kindref="compound">packet</ref><sp/>&amp;aPacket);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpacket_1a3aca23ec069310e1d9fa572c5e52a807" kindref="member">~packet</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">};<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="packet.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<map id="insertEvent" name="insertEvent">
+<area shape="rect" id="Node000001" title="Insert given event object to the events list, then sort the list with time ordered." alt="" coords="486,31,574,57"/>
+<area shape="rect" id="Node000002" href="$main_8cc.html#a2be16db840defa7a42b72ec0320ebb28" title="Add arrival event with given destination for scheduling, time between packets transmitted correspond ..." alt="" coords="295,5,402,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="471,38,402,29,403,23,472,33"/>
+<area shape="rect" id="Node000005" href="$main_8cc.html#a2b350615ebf5a6af338d81e1a864b48e" title="Scheduling transmission with given time." alt="" coords="259,56,438,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="471,55,439,59,438,54,470,50"/>
+<area shape="rect" id="Node000003" href="$main_8cc.html#a396a5d03eec031763770fd71ac337dc1" title="STARTING SIMULATION." alt="" coords="103,31,211,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="280,30,212,40,211,34,279,25"/>
+<area shape="rect" id="Node000004" href="$main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="243,58,211,54,212,49,244,53"/>
+</map>

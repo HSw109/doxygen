@@ -1,0 +1,5 @@
+<map id="packet" name="packet">
+<area shape="rect" id="Node000001" title="Represents a network packet in the simulation." alt="" coords="29,288,124,421"/>
+<area shape="rect" id="Node000002" href="$classdestination.html" title=" " alt="" coords="5,5,148,224"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,224,79,271,74,271,74,224"/>
+</map>

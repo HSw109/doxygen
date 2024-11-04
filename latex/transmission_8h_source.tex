@@ -1,0 +1,43 @@
+\doxysection{transmission.\+h}
+\hypertarget{transmission_8h_source}{}\label{transmission_8h_source}\mbox{\hyperlink{transmission_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TRANSMISSION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TRANSMISSION\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{packet_8h}{packet.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{destination_8h}{destination.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{transmission_8h_acac6dc1d91e8b14df7007ddb4e25c58d}{alpha\_i}}(\mbox{\hyperlink{classpacket}{packet}}\ pkt);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{transmission_8h_ab7342ed5f6ffba181326149f8dd8bcfa}{getMacTransmissionTime}}(\mbox{\hyperlink{classpacket}{packet}}\ aPacket,\ \textcolor{keywordtype}{int}\ nbOfBytesMac,\ \textcolor{keywordtype}{int}\ ru);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{transmission_8h_a54eb34961baa3decb1e480234eee0a45}{newDest}}(\mbox{\hyperlink{classdestination}{destination}}\ aDest,\ std::list<destination>\ destList);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{transmission_8h_ac6d611f7de49524c593519d0425c5a09}{getTransmissionTimeOfdmaFrame}}(std::list<packet>\ packetsList,\ std::vector<int>\ ruList);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{int}\ *\ \mbox{\hyperlink{transmission_8h_aaa49bc1ad53343dcbe56639d207e83a6}{ruAllocation}}(std::list<packet>\ pkt\_set);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{transmission_8h_ac2e8aca1d9459efd72866fb4009aeaf6}{ruBruteForce}}(std::vector<int>\ ru,\ \textcolor{keywordtype}{int}\ noSta,\ std::list<std::vector<int>>\ \&ruList);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ std::vector<int>\ \mbox{\hyperlink{transmission_8h_aee5e234bc1d3de3097033b1b12d5ee0c}{ruAllocationOptimal}}(std::list<packet>\ packetsList);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{transmission_8h_a147da8463af38f23f7cc084be4920c1e}{objectiveFunction}}(std::list<packet>\ packetsList,\ std::vector<int>\ ruList);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{transmission_8h_ac15752338ea1254dff25c7cb14140a08}{getTransmissionTimePayload}}(\mbox{\hyperlink{classpacket}{packet}}\ aPacket,\ \textcolor{keywordtype}{int}\ ru);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{transmission_8h_ab16115ae938d90def3db56ef8c0c87ed}{fifo}}(std::list<packet>\ \&\mbox{\hyperlink{main_8cc_a54235a9d73d17314492fc0b6bbe12c10}{buffer}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{main_8cc_a272038ad264893a568c808f13d818b17}{currentTime}});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{transmission_8h_a22f983f29243c20d665bf025aada871e}{fifoAggregation}}(std::list<packet>\ \&\mbox{\hyperlink{main_8cc_a54235a9d73d17314492fc0b6bbe12c10}{buffer}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{main_8cc_a272038ad264893a568c808f13d818b17}{currentTime}});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{transmission_8h_a8d89a9539ccc0c3fb5a43f756c60e3d5}{fifoOFDMAOptimal}}(std::list<packet>\ \&\mbox{\hyperlink{main_8cc_a54235a9d73d17314492fc0b6bbe12c10}{buffer}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{main_8cc_a272038ad264893a568c808f13d818b17}{currentTime}});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{transmission_8h_ac756511a8c11b7bdd34da37e56c2881c}{fifo\_ofdma}}(std::list<packet>\ \&\mbox{\hyperlink{main_8cc_a54235a9d73d17314492fc0b6bbe12c10}{buffer}});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{transmission_8h_aea69413bba5cf554127cb5ba791e66ad}{transmitNextPackets}}(\textcolor{keywordtype}{int}\ discipline,\ std::list<packet>\ \&\mbox{\hyperlink{main_8cc_a54235a9d73d17314492fc0b6bbe12c10}{buffer}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{main_8cc_a272038ad264893a568c808f13d818b17}{currentTime}});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

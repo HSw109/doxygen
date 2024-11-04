@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classpacket" kind="class" language="C++" prot="public">
+    <compoundname>packet</compoundname>
+    <includes refid="packet_8h" local="no">packet.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classpacket_1aabf7e3d557441592087d82f797b6e809" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int packet::m_size</definition>
+        <argsstring></argsstring>
+        <name>m_size</name>
+        <qualifiedname>packet::m_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="packet.h" line="26" column="4" bodyfile="packet.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="transmission_8cc_1acac6dc1d91e8b14df7007ddb4e25c58d" compoundref="transmission_8cc" startline="107" endline="110">alpha_i</referencedby>
+        <referencedby refid="transmission_8cc_1ab2338ac05d15d17fdcd3b6401a6e4508" compoundref="transmission_8cc" startline="339" endline="362">fifo</referencedby>
+        <referencedby refid="transmission_8cc_1a22f983f29243c20d665bf025aada871e" compoundref="transmission_8cc" startline="379" endline="487">fifoAggregation</referencedby>
+        <referencedby refid="transmission_8cc_1ab7342ed5f6ffba181326149f8dd8bcfa" compoundref="transmission_8cc" startline="66" endline="81">getMacTransmissionTime</referencedby>
+        <referencedby refid="transmission_8cc_1ac15752338ea1254dff25c7cb14140a08" compoundref="transmission_8cc" startline="315" endline="330">getTransmissionTimePayload</referencedby>
+        <referencedby refid="classpacket_1a10bdaf10787afe1906641c09b1a2b178" compoundref="packet_8cc" startline="28" endline="36">operator==</referencedby>
+        <referencedby refid="classpacket_1ad95bdce2542d99fb3c3568b0db27370d" compoundref="packet_8cc" startline="13" endline="18">packet</referencedby>
+        <referencedby refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" compoundref="main_8cc" startline="165" endline="272">simulateQueue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classpacket_1a28d79baa3b5bfb62fe40c5ac1c0af1f6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double packet::m_arrival</definition>
+        <argsstring></argsstring>
+        <name>m_arrival</name>
+        <qualifiedname>packet::m_arrival</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="packet.h" line="27" column="8" bodyfile="packet.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="transmission_8cc_1ab2338ac05d15d17fdcd3b6401a6e4508" compoundref="transmission_8cc" startline="339" endline="362">fifo</referencedby>
+        <referencedby refid="classpacket_1a10bdaf10787afe1906641c09b1a2b178" compoundref="packet_8cc" startline="28" endline="36">operator==</referencedby>
+        <referencedby refid="classpacket_1ad95bdce2542d99fb3c3568b0db27370d" compoundref="packet_8cc" startline="13" endline="18">packet</referencedby>
+        <referencedby refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" compoundref="main_8cc" startline="165" endline="272">simulateQueue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classpacket_1ab6ac239ca93654d87058539f0c2aae80" prot="public" static="no" mutable="no">
+        <type><ref refid="classdestination" kindref="compound">destination</ref></type>
+        <definition>destination packet::m_destination</definition>
+        <argsstring></argsstring>
+        <name>m_destination</name>
+        <qualifiedname>packet::m_destination</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="packet.h" line="28" column="13" bodyfile="packet.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="transmission_8cc_1acac6dc1d91e8b14df7007ddb4e25c58d" compoundref="transmission_8cc" startline="107" endline="110">alpha_i</referencedby>
+        <referencedby refid="transmission_8cc_1ab2338ac05d15d17fdcd3b6401a6e4508" compoundref="transmission_8cc" startline="339" endline="362">fifo</referencedby>
+        <referencedby refid="transmission_8cc_1a22f983f29243c20d665bf025aada871e" compoundref="transmission_8cc" startline="379" endline="487">fifoAggregation</referencedby>
+        <referencedby refid="transmission_8cc_1ab7342ed5f6ffba181326149f8dd8bcfa" compoundref="transmission_8cc" startline="66" endline="81">getMacTransmissionTime</referencedby>
+        <referencedby refid="transmission_8cc_1ac15752338ea1254dff25c7cb14140a08" compoundref="transmission_8cc" startline="315" endline="330">getTransmissionTimePayload</referencedby>
+        <referencedby refid="classpacket_1a10bdaf10787afe1906641c09b1a2b178" compoundref="packet_8cc" startline="28" endline="36">operator==</referencedby>
+        <referencedby refid="classpacket_1ad95bdce2542d99fb3c3568b0db27370d" compoundref="packet_8cc" startline="13" endline="18">packet</referencedby>
+        <referencedby refid="main_8cc_1a396a5d03eec031763770fd71ac337dc1" compoundref="main_8cc" startline="165" endline="272">simulateQueue</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpacket_1ad95bdce2542d99fb3c3568b0db27370d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>packet::packet</definition>
+        <argsstring>(int size, double arrival, destination dest)</argsstring>
+        <name>packet</name>
+        <qualifiedname>packet::packet</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>arrival</declname>
+        </param>
+        <param>
+          <type><ref refid="classdestination" kindref="compound">destination</ref></type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classpacket_1ad95bdce2542d99fb3c3568b0db27370d" kindref="member">packet::packet</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of a packet (bytes) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arrival</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time that packet arrived </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_destination" kindref="compound">Destination</ref> of packet is sending to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="packet.h" line="30" column="3" bodyfile="packet.cc" bodystart="13" bodyend="18"/>
+        <references refid="classpacket_1a28d79baa3b5bfb62fe40c5ac1c0af1f6" compoundref="packet_8h" startline="27">m_arrival</references>
+        <references refid="classpacket_1ab6ac239ca93654d87058539f0c2aae80" compoundref="packet_8h" startline="28">m_destination</references>
+        <references refid="classpacket_1aabf7e3d557441592087d82f797b6e809" compoundref="packet_8h" startline="26">m_size</references>
+      </memberdef>
+      <memberdef kind="function" id="classpacket_1a10bdaf10787afe1906641c09b1a2b178" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool packet::operator==</definition>
+        <argsstring>(packet &amp;aPacket)</argsstring>
+        <name>operator==</name>
+        <qualifiedname>packet::operator==</qualifiedname>
+        <param>
+          <type><ref refid="classpacket" kindref="compound">packet</ref> &amp;</type>
+          <declname>aPacket</declname>
+        </param>
+        <briefdescription>
+<para>Comparision. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPacket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="packet.h" line="31" column="6" bodyfile="packet.cc" bodystart="28" bodyend="36"/>
+        <references refid="classpacket_1a28d79baa3b5bfb62fe40c5ac1c0af1f6" compoundref="packet_8h" startline="27">m_arrival</references>
+        <references refid="classpacket_1ab6ac239ca93654d87058539f0c2aae80" compoundref="packet_8h" startline="28">m_destination</references>
+        <references refid="classpacket_1aabf7e3d557441592087d82f797b6e809" compoundref="packet_8h" startline="26">m_size</references>
+      </memberdef>
+      <memberdef kind="function" id="classpacket_1a3aca23ec069310e1d9fa572c5e52a807" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>packet::~packet</definition>
+        <argsstring>()</argsstring>
+        <name>~packet</name>
+        <qualifiedname>packet::~packet</qualifiedname>
+        <briefdescription>
+<para>Destroy the <ref refid="classpacket_1ad95bdce2542d99fb3c3568b0db27370d" kindref="member">packet::packet</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="packet.h" line="32" column="1" bodyfile="packet.cc" bodystart="42" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a network packet in the simulation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class models a packet, including its size, arrival time, and destination information.</para>
+<sect1 id="classpacket_1autotoc_md2_1s1"><sect2 id="classpacket_1autotoc_md2_1s2"><sect3 id="classpacket_1autotoc_md2_1s3"><sect4 id="classpacket_1autotoc_md2_1s4"><sect5 id="classpacket_1autotoc_md2">
+<title>Attributes:</title><para><itemizedlist>
+<listitem><para>int m_size: <linebreak/>
+ The size of the packet in bytes.</para>
+</listitem><listitem><para>double m_arrival: <linebreak/>
+ The time when the packet arrives.</para>
+</listitem><listitem><para>destination m_destination: <linebreak/>
+ The destination to which the packet is sent. </para>
+</listitem></itemizedlist>
+</para>
+</sect5></sect4></sect3></sect2></sect1>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>destination</label>
+        <link refid="classdestination"/>
+      </node>
+      <node id="1">
+        <label>packet</label>
+        <link refid="classpacket"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+m_destination</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="packet.h" line="24" column="1" bodyfile="packet.h" bodystart="24" bodyend="33"/>
+    <listofallmembers>
+      <member refid="classpacket_1a28d79baa3b5bfb62fe40c5ac1c0af1f6" prot="public" virt="non-virtual"><scope>packet</scope><name>m_arrival</name></member>
+      <member refid="classpacket_1ab6ac239ca93654d87058539f0c2aae80" prot="public" virt="non-virtual"><scope>packet</scope><name>m_destination</name></member>
+      <member refid="classpacket_1aabf7e3d557441592087d82f797b6e809" prot="public" virt="non-virtual"><scope>packet</scope><name>m_size</name></member>
+      <member refid="classpacket_1a10bdaf10787afe1906641c09b1a2b178" prot="public" virt="non-virtual"><scope>packet</scope><name>operator==</name></member>
+      <member refid="classpacket_1ad95bdce2542d99fb3c3568b0db27370d" prot="public" virt="non-virtual"><scope>packet</scope><name>packet</name></member>
+      <member refid="classpacket_1a3aca23ec069310e1d9fa572c5e52a807" prot="public" virt="non-virtual"><scope>packet</scope><name>~packet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

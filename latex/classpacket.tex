@@ -1,0 +1,134 @@
+\doxysection{packet Class Reference}
+\hypertarget{classpacket}{}\label{classpacket}\index{packet@{packet}}
+
+
+Represents a network packet in the simulation.  
+
+
+
+
+{\ttfamily \#include $<$packet.\+h$>$}
+
+
+
+Collaboration diagram for packet\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classpacket__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpacket_ad95bdce2542d99fb3c3568b0db27370d}{packet}} (int size, double arrival, \mbox{\hyperlink{classdestination}{destination}} dest)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classpacket_ad95bdce2542d99fb3c3568b0db27370d}{packet\+::packet} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpacket_a10bdaf10787afe1906641c09b1a2b178}{operator==}} (\mbox{\hyperlink{classpacket}{packet}} \&a\+Packet)
+\begin{DoxyCompactList}\small\item\em Comparision. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpacket_a3aca23ec069310e1d9fa572c5e52a807}{\texorpdfstring{$\sim$}{\string~}packet}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{classpacket_ad95bdce2542d99fb3c3568b0db27370d}{packet\+::packet} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classpacket_aabf7e3d557441592087d82f797b6e809}{m\+\_\+size}}
+\item 
+double \mbox{\hyperlink{classpacket_a28d79baa3b5bfb62fe40c5ac1c0af1f6}{m\+\_\+arrival}}
+\item 
+\mbox{\hyperlink{classdestination}{destination}} \mbox{\hyperlink{classpacket_ab6ac239ca93654d87058539f0c2aae80}{m\+\_\+destination}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a network packet in the simulation. 
+
+This class models a packet, including its size, arrival time, and destination information.\hypertarget{classpacket_autotoc_md2}{}\doxysubsubsubsubsubsection{\texorpdfstring{Attributes\+:}{Attributes\+:}}\label{classpacket_autotoc_md2}
+
+\begin{DoxyItemize}
+\item int m\+\_\+size\+: ~\newline
+ The size of the packet in bytes.
+\item double m\+\_\+arrival\+: ~\newline
+ The time when the packet arrives.
+\item destination m\+\_\+destination\+: ~\newline
+ The destination to which the packet is sent. 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classpacket_ad95bdce2542d99fb3c3568b0db27370d}\index{packet@{packet}!packet@{packet}}
+\index{packet@{packet}!packet@{packet}}
+\doxysubsubsection{\texorpdfstring{packet()}{packet()}}
+{\footnotesize\ttfamily \label{classpacket_ad95bdce2542d99fb3c3568b0db27370d} 
+packet\+::packet (\begin{DoxyParamCaption}\item[{int}]{size}{, }\item[{double}]{arrival}{, }\item[{\mbox{\hyperlink{classdestination}{destination}}}]{dest}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{classpacket_ad95bdce2542d99fb3c3568b0db27370d}{packet\+::packet} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size of a packet (bytes) \\
+\hline
+{\em arrival} & Time that packet arrived \\
+\hline
+{\em dest} & \doxylink{class_destination}{Destination} of packet is sending to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classpacket_a3aca23ec069310e1d9fa572c5e52a807}\index{packet@{packet}!````~packet@{\texorpdfstring{$\sim$}{\string~}packet}}
+\index{````~packet@{\texorpdfstring{$\sim$}{\string~}packet}!packet@{packet}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}packet()}{\string~packet()}}
+{\footnotesize\ttfamily \label{classpacket_a3aca23ec069310e1d9fa572c5e52a807} 
+packet\+::\texorpdfstring{$\sim$}{\string~}packet (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroy the \doxylink{classpacket_ad95bdce2542d99fb3c3568b0db27370d}{packet\+::packet} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpacket_a10bdaf10787afe1906641c09b1a2b178}\index{packet@{packet}!operator==@{operator==}}
+\index{operator==@{operator==}!packet@{packet}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{classpacket_a10bdaf10787afe1906641c09b1a2b178} 
+bool packet\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpacket}{packet}} \&}]{a\+Packet}{}\end{DoxyParamCaption})}
+
+
+
+Comparision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Packet} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classpacket_a28d79baa3b5bfb62fe40c5ac1c0af1f6}\index{packet@{packet}!m\_arrival@{m\_arrival}}
+\index{m\_arrival@{m\_arrival}!packet@{packet}}
+\doxysubsubsection{\texorpdfstring{m\_arrival}{m\_arrival}}
+{\footnotesize\ttfamily \label{classpacket_a28d79baa3b5bfb62fe40c5ac1c0af1f6} 
+double packet\+::m\+\_\+arrival}
+
+\Hypertarget{classpacket_ab6ac239ca93654d87058539f0c2aae80}\index{packet@{packet}!m\_destination@{m\_destination}}
+\index{m\_destination@{m\_destination}!packet@{packet}}
+\doxysubsubsection{\texorpdfstring{m\_destination}{m\_destination}}
+{\footnotesize\ttfamily \label{classpacket_ab6ac239ca93654d87058539f0c2aae80} 
+\mbox{\hyperlink{classdestination}{destination}} packet\+::m\+\_\+destination}
+
+\Hypertarget{classpacket_aabf7e3d557441592087d82f797b6e809}\index{packet@{packet}!m\_size@{m\_size}}
+\index{m\_size@{m\_size}!packet@{packet}}
+\doxysubsubsection{\texorpdfstring{m\_size}{m\_size}}
+{\footnotesize\ttfamily \label{classpacket_aabf7e3d557441592087d82f797b6e809} 
+int packet\+::m\+\_\+size}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{packet_8h}{packet.\+h}}\item 
+\mbox{\hyperlink{packet_8cc}{packet.\+cc}}\end{DoxyCompactItemize}

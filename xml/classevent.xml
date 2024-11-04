@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classevent" kind="class" language="C++" prot="public">
+    <compoundname>event</compoundname>
+    <includes refid="event_8h" local="no">event.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classevent_1a225755cc86473cfa846e0916f1a14673" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int event::m_type</definition>
+        <argsstring></argsstring>
+        <name>m_type</name>
+        <qualifiedname>event::m_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="event.h" line="26" column="5" bodyfile="event.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classevent_1ab54feb625799baa41b05e8737aab581b" compoundref="event_8cc" startline="27" endline="32">event</referencedby>
+        <referencedby refid="main_8cc_1a6038201223d2d33b5dad7932cdb3d28a" compoundref="main_8cc" startline="73" endline="87">insertEvent</referencedby>
+        <referencedby refid="classevent_1abb86e9c16cba8f886a22ba65403ef729" compoundref="event_8cc" startline="44" endline="48">print</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classevent_1a197ccc178fba5962fe0befb78782cfb7" prot="public" static="no" mutable="no">
+        <type><ref refid="classdestination" kindref="compound">destination</ref></type>
+        <definition>destination event::m_dest</definition>
+        <argsstring></argsstring>
+        <name>m_dest</name>
+        <qualifiedname>event::m_dest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="event.h" line="27" column="13" bodyfile="event.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classevent_1ab54feb625799baa41b05e8737aab581b" compoundref="event_8cc" startline="27" endline="32">event</referencedby>
+        <referencedby refid="main_8cc_1a6038201223d2d33b5dad7932cdb3d28a" compoundref="main_8cc" startline="73" endline="87">insertEvent</referencedby>
+        <referencedby refid="classevent_1abb86e9c16cba8f886a22ba65403ef729" compoundref="event_8cc" startline="44" endline="48">print</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classevent_1a6cdac5ba9e878cb82656bd1cc50f832e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double event::m_time</definition>
+        <argsstring></argsstring>
+        <name>m_time</name>
+        <qualifiedname>event::m_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="event.h" line="28" column="8" bodyfile="event.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classevent_1ab54feb625799baa41b05e8737aab581b" compoundref="event_8cc" startline="27" endline="32">event</referencedby>
+        <referencedby refid="main_8cc_1a6038201223d2d33b5dad7932cdb3d28a" compoundref="main_8cc" startline="73" endline="87">insertEvent</referencedby>
+        <referencedby refid="classevent_1abb86e9c16cba8f886a22ba65403ef729" compoundref="event_8cc" startline="44" endline="48">print</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classevent_1a9cb379690ae9bc9b599bf5170b978db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const event &amp;evt)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>event::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classevent" kindref="compound">event</ref> &amp;</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+<para>Shortcut of operator &quot;&lt;&lt;&quot; (for printing event details) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="event.h" line="29" column="8" bodyfile="event.cc" bodystart="10" bodyend="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevent_1ab54feb625799baa41b05e8737aab581b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>event::event</definition>
+        <argsstring>(int type, destination dest, double time)</argsstring>
+        <name>event</name>
+        <qualifiedname>event::event</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="classdestination" kindref="compound">destination</ref></type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classevent_1ab54feb625799baa41b05e8737aab581b" kindref="member">event::event</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arrival or Transmission </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Correspond destination that event pointed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time that event occurs </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="event.h" line="31" column="1" bodyfile="event.cc" bodystart="27" bodyend="32"/>
+        <references refid="classevent_1a197ccc178fba5962fe0befb78782cfb7" compoundref="event_8h" startline="27">m_dest</references>
+        <references refid="classevent_1a6cdac5ba9e878cb82656bd1cc50f832e" compoundref="event_8h" startline="28">m_time</references>
+        <references refid="classevent_1a225755cc86473cfa846e0916f1a14673" compoundref="event_8h" startline="26">m_type</references>
+      </memberdef>
+      <memberdef kind="function" id="classevent_1a9027354d797205dd1369b46f3485b8c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>event::~event</definition>
+        <argsstring>()</argsstring>
+        <name>~event</name>
+        <qualifiedname>event::~event</qualifiedname>
+        <briefdescription>
+<para>Destroy the <ref refid="classevent_1ab54feb625799baa41b05e8737aab581b" kindref="member">event::event</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="event.h" line="32" column="1" bodyfile="event.cc" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classevent_1abb86e9c16cba8f886a22ba65403ef729" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void event::print</definition>
+        <argsstring>()</argsstring>
+        <name>print</name>
+        <qualifiedname>event::print</qualifiedname>
+        <briefdescription>
+<para>Print details of an event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="event.h" line="33" column="6" bodyfile="event.cc" bodystart="44" bodyend="48"/>
+        <references refid="classevent_1a197ccc178fba5962fe0befb78782cfb7" compoundref="event_8h" startline="27">m_dest</references>
+        <references refid="classdestination_1a423b9008ebc7659776c323fd4c8250cc" compoundref="destination_8h" startline="31">destination::m_no</references>
+        <references refid="classevent_1a6cdac5ba9e878cb82656bd1cc50f832e" compoundref="event_8h" startline="28">m_time</references>
+        <references refid="classevent_1a225755cc86473cfa846e0916f1a14673" compoundref="event_8h" startline="26">m_type</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents an event in the network simulation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class models an event, such as packet arrival or transmission, with details about the destination and time.</para>
+<sect1 id="classevent_1autotoc_md1_1s1"><sect2 id="classevent_1autotoc_md1_1s2"><sect3 id="classevent_1autotoc_md1_1s3"><sect4 id="classevent_1autotoc_md1_1s4"><sect5 id="classevent_1autotoc_md1">
+<title>Attributes:</title><para><itemizedlist>
+<listitem><para>int m_type: <linebreak/>
+ The type of the event: 0 for arrival, 1 for transmission.</para>
+</listitem><listitem><para>destination m_dest: <linebreak/>
+ For an arrival event, this is the corresponding destination.</para>
+</listitem><listitem><para>double m_time: <linebreak/>
+ The time when the event occurs. <linebreak/>
+ </para>
+</listitem></itemizedlist>
+</para>
+</sect5></sect4></sect3></sect2></sect1>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>destination</label>
+        <link refid="classdestination"/>
+      </node>
+      <node id="1">
+        <label>event</label>
+        <link refid="classevent"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+m_dest</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="event.h" line="24" column="1" bodyfile="event.h" bodystart="24" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classevent_1ab54feb625799baa41b05e8737aab581b" prot="public" virt="non-virtual"><scope>event</scope><name>event</name></member>
+      <member refid="classevent_1a197ccc178fba5962fe0befb78782cfb7" prot="public" virt="non-virtual"><scope>event</scope><name>m_dest</name></member>
+      <member refid="classevent_1a6cdac5ba9e878cb82656bd1cc50f832e" prot="public" virt="non-virtual"><scope>event</scope><name>m_time</name></member>
+      <member refid="classevent_1a225755cc86473cfa846e0916f1a14673" prot="public" virt="non-virtual"><scope>event</scope><name>m_type</name></member>
+      <member refid="classevent_1a9cb379690ae9bc9b599bf5170b978db0" prot="public" virt="non-virtual"><scope>event</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classevent_1abb86e9c16cba8f886a22ba65403ef729" prot="public" virt="non-virtual"><scope>event</scope><name>print</name></member>
+      <member refid="classevent_1a9027354d797205dd1369b46f3485b8c4" prot="public" virt="non-virtual"><scope>event</scope><name>~event</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

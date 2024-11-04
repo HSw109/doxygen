@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="event_8h" kind="file" language="C++">
+    <compoundname>event.h</compoundname>
+    <includes refid="destination_8h" local="yes">destination.h</includes>
+    <includedby refid="event_8cc" local="yes">event.cc</includedby>
+    <includedby refid="main_8cc" local="yes">main.cc</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>destination.h</label>
+        <link refid="destination_8h"/>
+      </node>
+      <node id="1">
+        <label>event.h</label>
+        <link refid="event_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>event.cc</label>
+        <link refid="event_8cc"/>
+      </node>
+      <node id="1">
+        <label>event.h</label>
+        <link refid="event_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>main.cc</label>
+        <link refid="main_8cc"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classevent" prot="public">event</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>EVENT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVENT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="destination_8h" kindref="compound">destination.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classevent" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classevent" kindref="compound">event</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="classevent_1a225755cc86473cfa846e0916f1a14673" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classevent_1a225755cc86473cfa846e0916f1a14673" kindref="member">m_type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//0:<sp/>arrival<sp/>1:<sp/>transmission<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classevent_1a197ccc178fba5962fe0befb78782cfb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdestination" kindref="compound">destination</ref><sp/><ref refid="classevent_1a197ccc178fba5962fe0befb78782cfb7" kindref="member">m_dest</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//for<sp/>an<sp/>arrival:<sp/>the<sp/>corresponding<sp/>destination<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classevent_1a6cdac5ba9e878cb82656bd1cc50f832e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classevent_1a6cdac5ba9e878cb82656bd1cc50f832e" kindref="member">m_time</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//time<sp/>of<sp/>this<sp/>event<sp/>(reach<sp/>the<sp/>destination)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="classevent_1a9cb379690ae9bc9b599bf5170b978db0" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classevent" kindref="compound">event</ref>&amp;<sp/>evt);<sp/><sp/></highlight><highlight class="comment">//This<sp/>is<sp/>the<sp/>syntax<sp/>for<sp/>overloading<sp/>the<sp/>&lt;&lt;<sp/>operator.<sp/>The<sp/>operator<sp/>is<sp/>used<sp/>to<sp/>insert<sp/>data<sp/>into<sp/>an<sp/>output<sp/>stream<sp/>(like<sp/>std::cout).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classevent_1ab54feb625799baa41b05e8737aab581b" kindref="member">event</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/><ref refid="classdestination" kindref="compound">destination</ref><sp/>dest,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classevent_1a9027354d797205dd1369b46f3485b8c4" kindref="member">~event</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevent_1abb86e9c16cba8f886a22ba65403ef729" kindref="member">print</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="event.h"/>
+  </compounddef>
+</doxygen>

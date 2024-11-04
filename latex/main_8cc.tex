@@ -1,0 +1,289 @@
+\doxysection{main.\+cc File Reference}
+\hypertarget{main_8cc}{}\label{main_8cc}\index{main.cc@{main.cc}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include "{}packet.\+h"{}}\newline
+{\ttfamily \#include "{}destination.\+h"{}}\newline
+{\ttfamily \#include "{}event.\+h"{}}\newline
+{\ttfamily \#include "{}transmission.\+h"{}}\newline
+{\ttfamily \#include "{}spdlog/spdlog.\+h"{}}\newline
+{\ttfamily \#include "{}spdlog/sinks/stdout\+\_\+color\+\_\+sinks.\+h"{}}\newline
+Include dependency graph for main.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cc_a24c4eaa31943d824eb99a9331b7a535e}{get\+Sample\+Exp\+Distribution}} (double lambda)
+\begin{DoxyCompactList}\small\item\em Get the Sample Poisson Distribution object, lambda is the mean of the Poisson distribution. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cc_a6291f693a2bd3ab2f5572e5629509ed3}{print\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Get output stream, print data of each event instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cc_a6038201223d2d33b5dad7932cdb3d28a}{insert\+Event}} (class \mbox{\hyperlink{classevent}{event}} an\+Event)
+\begin{DoxyCompactList}\small\item\em Insert given event object to the events list, then sort the list with time ordered. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cc_a2be16db840defa7a42b72ec0320ebb28}{add\+Next\+Arrival}} (class \mbox{\hyperlink{classdestination}{destination}} dest)
+\begin{DoxyCompactList}\small\item\em Add arrival event with given destination for scheduling, time between packets transmitted correspond to each type of distribution is calculated here. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cc_a2b350615ebf5a6af338d81e1a864b48e}{schedule\+Next\+Transmission}} (double time)
+\begin{DoxyCompactList}\small\item\em Scheduling transmission with given time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cc_a5f910f9f64fe4a6481f828d276c72b24}{logger}} (string level\+\_\+log)
+\item 
+void \mbox{\hyperlink{main_8cc_a396a5d03eec031763770fd71ac337dc1}{simulate\+Queue}} (list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ \&\mbox{\hyperlink{main_8cc_a54235a9d73d17314492fc0b6bbe12c10}{buffer}}, int discipline)
+\begin{DoxyCompactList}\small\item\em STARTING SIMULATION. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cc_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{main_8cc_a272038ad264893a568c808f13d818b17}{current\+Time}} =0.\+0
+\item 
+double \mbox{\hyperlink{main_8cc_a6eceaf5d8661dfce847f4d43b597a68c}{start\+Tx\+Time}} =0.\+0
+\item 
+double \mbox{\hyperlink{main_8cc_a23f73030eca70af950169253afb45e78}{stop\+Tx\+Time}} =0.\+0
+\item 
+list$<$ \mbox{\hyperlink{classevent}{event}} $>$ \mbox{\hyperlink{main_8cc_a819cc5d71332d0b46fb04946b0f7053a}{events}}
+\item 
+vector$<$ \mbox{\hyperlink{classdestination}{destination}} $>$ \mbox{\hyperlink{main_8cc_ae5f0037cbe9c880ca2b6b4216489f6bb}{destinations}}
+\item 
+list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ \mbox{\hyperlink{main_8cc_a54235a9d73d17314492fc0b6bbe12c10}{buffer}}
+\item 
+mt19937 \mbox{\hyperlink{main_8cc_aa06e8bec472fb80093156543f60afe51}{engine}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cc_a2be16db840defa7a42b72ec0320ebb28}\index{main.cc@{main.cc}!addNextArrival@{addNextArrival}}
+\index{addNextArrival@{addNextArrival}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{addNextArrival()}{addNextArrival()}}
+{\footnotesize\ttfamily \label{main_8cc_a2be16db840defa7a42b72ec0320ebb28} 
+void add\+Next\+Arrival (\begin{DoxyParamCaption}\item[{class \mbox{\hyperlink{classdestination}{destination}}}]{dest}{}\end{DoxyParamCaption})}
+
+
+
+Add arrival event with given destination for scheduling, time between packets transmitted correspond to each type of distribution is calculated here. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{main_8cc_a2be16db840defa7a42b72ec0320ebb28_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cc_a2be16db840defa7a42b72ec0320ebb28_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cc_a24c4eaa31943d824eb99a9331b7a535e}\index{main.cc@{main.cc}!getSampleExpDistribution@{getSampleExpDistribution}}
+\index{getSampleExpDistribution@{getSampleExpDistribution}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{getSampleExpDistribution()}{getSampleExpDistribution()}}
+{\footnotesize\ttfamily \label{main_8cc_a24c4eaa31943d824eb99a9331b7a535e} 
+int get\+Sample\+Exp\+Distribution (\begin{DoxyParamCaption}\item[{double}]{lambda}{}\end{DoxyParamCaption})}
+
+
+
+Get the Sample Poisson Distribution object, lambda is the mean of the Poisson distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lambda} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cc_a24c4eaa31943d824eb99a9331b7a535e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cc_a6038201223d2d33b5dad7932cdb3d28a}\index{main.cc@{main.cc}!insertEvent@{insertEvent}}
+\index{insertEvent@{insertEvent}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{insertEvent()}{insertEvent()}}
+{\footnotesize\ttfamily \label{main_8cc_a6038201223d2d33b5dad7932cdb3d28a} 
+void insert\+Event (\begin{DoxyParamCaption}\item[{class \mbox{\hyperlink{classevent}{event}}}]{an\+Event}{}\end{DoxyParamCaption})}
+
+
+
+Insert given event object to the events list, then sort the list with time ordered. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em an\+Event} & \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cc_a6038201223d2d33b5dad7932cdb3d28a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cc_a5f910f9f64fe4a6481f828d276c72b24}\index{main.cc@{main.cc}!logger@{logger}}
+\index{logger@{logger}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{logger()}{logger()}}
+{\footnotesize\ttfamily \label{main_8cc_a5f910f9f64fe4a6481f828d276c72b24} 
+void logger (\begin{DoxyParamCaption}\item[{string}]{level\+\_\+log}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=122pt]{main_8cc_a5f910f9f64fe4a6481f828d276c72b24_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{main_8cc_a5f910f9f64fe4a6481f828d276c72b24_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cc_a0ddf1224851353fc92bfbff6f499fa97}\index{main.cc@{main.cc}!main@{main}}
+\index{main@{main}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cc_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cc_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cc_a6291f693a2bd3ab2f5572e5629509ed3}\index{main.cc@{main.cc}!printEvents@{printEvents}}
+\index{printEvents@{printEvents}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{printEvents()}{printEvents()}}
+{\footnotesize\ttfamily \label{main_8cc_a6291f693a2bd3ab2f5572e5629509ed3} 
+void print\+Events (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get output stream, print data of each event instance. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{main_8cc_a6291f693a2bd3ab2f5572e5629509ed3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cc_a2b350615ebf5a6af338d81e1a864b48e}\index{main.cc@{main.cc}!scheduleNextTransmission@{scheduleNextTransmission}}
+\index{scheduleNextTransmission@{scheduleNextTransmission}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{scheduleNextTransmission()}{scheduleNextTransmission()}}
+{\footnotesize\ttfamily \label{main_8cc_a2b350615ebf5a6af338d81e1a864b48e} 
+void schedule\+Next\+Transmission (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Scheduling transmission with given time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{main_8cc_a2b350615ebf5a6af338d81e1a864b48e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cc_a2b350615ebf5a6af338d81e1a864b48e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cc_a396a5d03eec031763770fd71ac337dc1}\index{main.cc@{main.cc}!simulateQueue@{simulateQueue}}
+\index{simulateQueue@{simulateQueue}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{simulateQueue()}{simulateQueue()}}
+{\footnotesize\ttfamily \label{main_8cc_a396a5d03eec031763770fd71ac337dc1} 
+void simulate\+Queue (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{classpacket}{packet}} $>$ \&}]{buffer}{, }\item[{int}]{discipline}{}\end{DoxyParamCaption})}
+
+
+
+STARTING SIMULATION. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & List of packets \\
+\hline
+{\em discipline} & Discipline\+: 0\+: FIFO, 1\+: fifo\+OFDMAoptimal, 2\+:fifo\+Aggregation \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cc_a396a5d03eec031763770fd71ac337dc1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{main_8cc_a396a5d03eec031763770fd71ac337dc1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cc_a54235a9d73d17314492fc0b6bbe12c10}\index{main.cc@{main.cc}!buffer@{buffer}}
+\index{buffer@{buffer}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily \label{main_8cc_a54235a9d73d17314492fc0b6bbe12c10} 
+list$<$\mbox{\hyperlink{classpacket}{packet}}$>$ buffer}
+
+\Hypertarget{main_8cc_a272038ad264893a568c808f13d818b17}\index{main.cc@{main.cc}!currentTime@{currentTime}}
+\index{currentTime@{currentTime}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{currentTime}{currentTime}}
+{\footnotesize\ttfamily \label{main_8cc_a272038ad264893a568c808f13d818b17} 
+double current\+Time =0.\+0}
+
+\Hypertarget{main_8cc_ae5f0037cbe9c880ca2b6b4216489f6bb}\index{main.cc@{main.cc}!destinations@{destinations}}
+\index{destinations@{destinations}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{destinations}{destinations}}
+{\footnotesize\ttfamily \label{main_8cc_ae5f0037cbe9c880ca2b6b4216489f6bb} 
+vector$<$\mbox{\hyperlink{classdestination}{destination}}$>$ destinations}
+
+\Hypertarget{main_8cc_aa06e8bec472fb80093156543f60afe51}\index{main.cc@{main.cc}!engine@{engine}}
+\index{engine@{engine}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{engine}{engine}}
+{\footnotesize\ttfamily \label{main_8cc_aa06e8bec472fb80093156543f60afe51} 
+mt19937 engine}
+
+\Hypertarget{main_8cc_a819cc5d71332d0b46fb04946b0f7053a}\index{main.cc@{main.cc}!events@{events}}
+\index{events@{events}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{events}{events}}
+{\footnotesize\ttfamily \label{main_8cc_a819cc5d71332d0b46fb04946b0f7053a} 
+list$<$\mbox{\hyperlink{classevent}{event}}$>$ events}
+
+\Hypertarget{main_8cc_a6eceaf5d8661dfce847f4d43b597a68c}\index{main.cc@{main.cc}!startTxTime@{startTxTime}}
+\index{startTxTime@{startTxTime}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{startTxTime}{startTxTime}}
+{\footnotesize\ttfamily \label{main_8cc_a6eceaf5d8661dfce847f4d43b597a68c} 
+double start\+Tx\+Time =0.\+0}
+
+\Hypertarget{main_8cc_a23f73030eca70af950169253afb45e78}\index{main.cc@{main.cc}!stopTxTime@{stopTxTime}}
+\index{stopTxTime@{stopTxTime}!main.cc@{main.cc}}
+\doxysubsubsection{\texorpdfstring{stopTxTime}{stopTxTime}}
+{\footnotesize\ttfamily \label{main_8cc_a23f73030eca70af950169253afb45e78} 
+double stop\+Tx\+Time =0.\+0}
+

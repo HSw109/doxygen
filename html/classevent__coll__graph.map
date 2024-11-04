@@ -1,0 +1,5 @@
+<map id="event" name="event">
+<area shape="rect" id="Node000001" title="Represents an event in the network simulation." alt="" coords="41,288,113,421"/>
+<area shape="rect" id="Node000002" href="$classdestination.html" title=" " alt="" coords="5,5,148,224"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,224,79,271,74,271,74,224"/>
+</map>

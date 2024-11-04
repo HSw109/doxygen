@@ -1,0 +1,47 @@
+\doxysection{Destination Class Reference}
+\hypertarget{class_destination}{}\label{class_destination}\index{Destination@{Destination}}
+
+
+Represents a network destination for packet transmission.  
+
+
+
+
+{\ttfamily \#include $<$destination.\+h$>$}
+
+
+
+Collaboration diagram for Destination\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{class_destination__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+Represents a network destination for packet transmission. 
+
+This class handles the configuration and management of a destination, including address, modulation scheme, and packet arrival details.\hypertarget{class_destination_autotoc_md0}{}\doxysubsubsubsubsubsection{\texorpdfstring{Attributes\+:}{Attributes\+:}}\label{class_destination_autotoc_md0}
+
+\begin{DoxyItemize}
+\item int m\+\_\+no\+: ~\newline
+ \doxylink{class_destination}{Destination} address (1, 2, etc.).
+\item int m\+\_\+mcs\+: ~\newline
+ Modulation and Coding Scheme (MCS) index.
+\item double m\+\_\+phy\+Rate\+: ~\newline
+ Physical Transmission Rate in Megabits per second (Mbit/s).
+\item double m\+\_\+arrival\+Rate\+: ~\newline
+ Number of packets transferred per second for this source.
+\item int m\+\_\+arrival\+Distribution\+: ~\newline
+ Distribution type for interarrival times\+:
+\begin{DoxyItemize}
+\item Deterministic (0)\+: time between events is constant.
+\item Poisson (1)\+: random events that occur independently with a constant average rate. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{destination_8h}{destination.\+h}}\end{DoxyCompactItemize}

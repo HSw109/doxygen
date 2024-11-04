@@ -1,0 +1,23 @@
+\doxysection{event.\+h}
+\hypertarget{event_8h_source}{}\label{event_8h_source}\mbox{\hyperlink{event_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EVENT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EVENT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{destination_8h}{destination.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classevent}{event}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classevent_a225755cc86473cfa846e0916f1a14673}{m\_type}};\ \ \ \ \ \ \ \textcolor{comment}{//0:\ arrival\ 1:\ transmission\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classdestination}{destination}}\ \mbox{\hyperlink{classevent_a197ccc178fba5962fe0befb78782cfb7}{m\_dest}};\ \ \ \textcolor{comment}{//for\ an\ arrival:\ the\ corresponding\ destination\ }}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classevent_a6cdac5ba9e878cb82656bd1cc50f832e}{m\_time}};\ \ \ \ \ \ \ \ \textcolor{comment}{//time\ of\ this\ event\ (reach\ the\ destination)}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \mbox{\hyperlink{classevent_a9cb379690ae9bc9b599bf5170b978db0}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classevent}{event}}\&\ evt);\ \ \textcolor{comment}{//This\ is\ the\ syntax\ for\ overloading\ the\ <<\ operator.\ The\ operator\ is\ used\ to\ insert\ data\ into\ an\ output\ stream\ (like\ std::cout).}}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classevent_ab54feb625799baa41b05e8737aab581b}{event}}(\textcolor{keywordtype}{int}\ type,\ \mbox{\hyperlink{classdestination}{destination}}\ dest,\ \textcolor{keywordtype}{double}\ time);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classevent_a9027354d797205dd1369b46f3485b8c4}{\string~event}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classevent_abb86e9c16cba8f886a22ba65403ef729}{print}}();}
+\DoxyCodeLine{00034\ \};\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
